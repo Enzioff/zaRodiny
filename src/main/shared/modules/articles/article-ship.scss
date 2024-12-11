@@ -1,0 +1,31 @@
+.article-ship {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    position: absolute;
+    top: -14px;
+    right: 0;
+    font-size: 139px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 111px;
+    letter-spacing: -0.05em;
+    text-align: right;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &__picture {
+    display: flex;
+    flex-shrink: 0;
+    padding-top: 27px;
+    width: 766px;
+    height: 640px;
+    overflow: hidden;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,40 @@
+.section {
+  &--intro {
+    position: relative;
+    max-height: 1090px;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  &--light {
+    background-color: $white;
+  }
+
+  &--union {
+    position: relative;
+    //margin-top: -28px;
+    z-index: 2;
+  }
+
+  &--sea {
+    background-color: $blue;
+  }
+
+  &--fixed-size {
+    height: 1080px;
+
+    .container {
+      height: 100%;
+    }
+
+    .grid {
+      height: 100%;
+    }
+  }
+
+  &--bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,19 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+    color: $gray;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+}

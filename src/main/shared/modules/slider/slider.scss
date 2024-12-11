@@ -1,0 +1,146 @@
+.slider {
+  position: relative;
+
+  &--fixed-size {
+    height: 960px;
+
+    .swiper {
+      height: inherit;
+    }
+
+    .swiper-slide {
+      height: auto !important;
+    }
+  }
+
+  &--visible {
+    .swiper {
+      overflow: visible;
+    }
+
+    .swiper-slide {
+      opacity: 0;
+      pointer-events: none;
+      transition: .2s linear;
+
+      &-active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  &--vertical-visible {
+    .swiper {
+      padding-right: 38px;
+    }
+
+    .swiper-slide {
+      opacity: 0;
+      pointer-events: none;
+      transition: .2s linear;
+
+      &-visible {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  &--center {
+    .swiper {
+      position: static;
+      max-width: 972px;
+      margin: 0 auto;
+    }
+  }
+
+  &--thumb-auto {
+    .swiper-wrapper {
+      justify-content: space-between;
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.swiper-slide-active {
+  .article-fish {
+    &__board > img {
+      filter: grayscale(0)
+    }
+  }
+}
+
+.swiper-slide-thumb-active {
+  .article-ship-tab {
+    background: $grad-blue;
+
+    &__text {
+      color: $white;
+    }
+
+    &__notation {
+      color: $white;
+      border-color: $white;
+    }
+
+    &__picture {
+      filter: grayscale(0%);
+    }
+  }
+}
+
+.swiper-btn {
+  cursor: pointer;
+  pointer-events: auto;
+
+  &--prev {
+    transform: rotate(180deg);
+  }
+
+  svg {
+    display: flex;
+    width: 38px;
+    height: 38px;
+    fill: $blue;
+  }
+}
+
+.swiper-control {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+
+  &--vertical {
+    position: absolute;
+    left: initial;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    gap: 25px;
+
+    .swiper-btn {
+      svg {
+        fill: $accent;
+      }
+    }
+    .swiper-btn--prev {
+      transform: rotate(-90deg);
+    }
+    .swiper-btn--next {
+      transform: rotate(90deg);
+    }
+  }
+}
+
