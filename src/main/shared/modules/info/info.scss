@@ -15,5 +15,18 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
+
+    &--grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-between;
+    }
+  }
+
+  &__path {
+    position: absolute;
+    top: 105px;
+    left: -15px;
+    pointer-events: none;
   }
 }

@@ -107,6 +107,12 @@
     height: 38px;
     fill: $blue;
   }
+
+  &--accent {
+    svg {
+      fill: $accent;
+    }
+  }
 }
 
 .swiper-control {
@@ -115,6 +121,7 @@
   left: 0;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   width: 100%;
   transform: translateY(-50%);
   z-index: 1;
@@ -141,6 +148,12 @@
     .swiper-btn--next {
       transform: rotate(90deg);
     }
+  }
+
+  &--bottom {
+    top: 100%;
+    width: max-content;
+    transform: none;
   }
 }
 

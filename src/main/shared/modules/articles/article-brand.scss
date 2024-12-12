@@ -1,0 +1,40 @@
+.article-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: max-content;
+  padding: 11px 15px;
+  border-radius: 50px;
+  background-color: $dark-second;
+  cursor: pointer;
+  transition: .2s;
+
+  &.active {
+    background-color: $accent;
+
+    .article-brand__text {
+      color: $white;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.24px;
+    text-align: left;
+    color: #A09990;
+    transition: .2s;
+  }
+}

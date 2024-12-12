@@ -1,0 +1,33 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  border: 1px solid $accent;
+  background-color: rgba(#D9D9D9, .1);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+
+  &__item {
+    display: flex;
+    flex-grow: 1;
+    padding: 13px 25px;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &.active {
+      background-color: $accent;
+
+      .switcher__text {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: $white;
+  }
+}

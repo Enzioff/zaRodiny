@@ -12,6 +12,8 @@ class Animation {
     
     init() {
         this.registerPlugins()
+        this.headerAnimation()
+        this.intro()
     }
     
     registerPlugins = () => {
@@ -58,7 +60,7 @@ class Animation {
             duration: 1,
             scrollTrigger: {
                 trigger: timeline,
-                start: 'bottom bottom',
+                start: 'top center',
                 scrub: 1,
             }
         })

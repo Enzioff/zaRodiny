@@ -12,6 +12,10 @@
 @import "./map/map";
 @import "./slider/slider";
 @import "./feature-news/feature-news";
+@import "./catalog/catalog";
+@import "./brands/brands";
+@import "./product-info/product-info";
+@import "./history/history";
 
 // articles
 @import "./articles/article-timeline";
@@ -19,3 +23,6 @@
 @import "./articles/article-ship";
 @import "./articles/article-ship-tab";
 @import "./articles/article-fish";
+@import "./articles/article-brand";
+@import "./articles/article-product";
+@import "./articles/article-picture";

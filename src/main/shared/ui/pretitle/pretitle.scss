@@ -15,11 +15,26 @@
     color: $white;
   }
 
+  &--accent {
+    background: none;
+    color: $accent-second;
+  }
+
   &--light {
     color: $white;
   }
 
   &--medium {
     font-weight: 500;
+  }
+
+  &--black {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    background: none;
+    color: #000000;
   }
 }

@@ -1,0 +1,36 @@
+.article-product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 11px 9px;
+  background: $grad-blue-radial;
+  border-radius: 13px;
+  overflow: hidden;
+
+  &.active {
+    border: 2px solid $white;
+  }
+
+  &--new {
+    background: $grad-accent-radial;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+    color: $white;
+  }
+
+  &__picture {
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
