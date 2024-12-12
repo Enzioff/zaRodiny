@@ -76,30 +76,30 @@ class MapAnimation {
                     mapTimeline.to(beacon, {
                         opacity: 1,
                         duration: 1,
-                    })
+                    }, '+=1')
                     mapTimeline.to(buoy1, {
                         opacity: 1,
                         duration: 1,
-                    })
+                    }, '+=1')
                     mapTimeline.to(buoy2, {
                         opacity: 1,
                         duration: 1,
-                    })
+                    }, '+=1')
                     mapTimeline.to(buoy3, {
                         opacity: 1,
                         duration: 1,
-                    })
+                    }, '+=1')
                     mapTimeline.to(ship, {
                         opacity: 1,
                         duration: 1,
-                    })
+                    }, '+=1')
                     gsap.set(path, {
                         drawSVG: "-0%",
                     })
                     mapTimeline.to(path, {
                         drawSVG: "-100%",
-                        duration: 1,
-                    })
+                        duration: 2,
+                    }, '+=1')
                 },
                 onReverseComplete: () => {
                     gsap.set(mapContainer, {

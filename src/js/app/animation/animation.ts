@@ -42,7 +42,8 @@ class Animation {
     headerAnimation = () => {
         window.addEventListener('scroll', () => {
             const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const images = document.querySelectorAll('.header img');
+            const images = document.querySelectorAll('.header img') as NodeListOf<HTMLElement>;
+            const logo = document.querySelector('.logo') as HTMLHtmlElement;
             
             if (currentScrollTop > this.lastScrollTop) {
                 gsap.to('.header', {
@@ -51,6 +52,10 @@ class Animation {
                 })
                 images[0].classList.add('hidden')
                 images[1].classList.remove('hidden')
+                gsap.to(logo, {
+                    y: 81,
+                    duration: 1,
+                })
             } else {
                 gsap.to('.header', {
                     yPercent: 0,
@@ -58,6 +63,10 @@ class Animation {
                 })
                 images[0].classList.remove('hidden')
                 images[1].classList.add('hidden')
+                gsap.to(logo, {
+                    y: 0,
+                    duration: 1,
+                })
             }
             
             this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
@@ -138,13 +147,28 @@ class Animation {
                     duration: 2,
                     onStart: () => {
                         window.addEventListener('scroll', (evt) => scrollReturn(evt))
+                        const element = document.querySelector('.article-fish--hidden') as HTMLElement;
+                        element.style.opacity = '0';
                     },
                     onComplete: () => {
                         window.removeEventListener('scroll', scrollReturn)
+                        document.querySelector('#fishBlock').insertAdjacentHTML('afterbegin', this.fishTemplate())
+                        const fish = document.querySelector('.fish-in')
+                        setTimeout(() => {
+                            fish.remove()
+                            const element = document.querySelector('.article-fish--hidden') as HTMLElement;
+                            element.style.opacity = '1';
+                        }, 2200)
                     }
                 })
             }
         })
+    }
+    
+    fishTemplate = () => {
+        return `
+           <img class="fish-in" src="./assets/images/fish-sweem.gif" alt="">
+        `
     }
     
     videoTemplate = () => {

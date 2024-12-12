@@ -125,3 +125,18 @@ body {
   width: 104px;
   height: 84px;
 }
+
+.fish-in {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 88%;
+  z-index: 2;
+  aspect-ratio: 16 / 9;
+  pointer-events: none;
+}

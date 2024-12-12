@@ -1,5 +1,6 @@
 .article-fish {
   display: flex;
+  transition: .2s linear;
 
   &__board {
     position: relative;
