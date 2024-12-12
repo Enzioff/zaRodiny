@@ -2,6 +2,7 @@
   &--intro {
     position: relative;
     height: 100vh;
+    min-height: 1090px;
     overflow: hidden;
     z-index: 0;
   }
@@ -32,9 +33,22 @@
     }
   }
 
+  &--full {
+    position: relative;
+    height: 100vh;
+    min-height: 1090px;
+  }
+
   &--bg {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  &--ship {
+    background: url("../assets/images/ship-comanda.png"), url("../assets/images/map-bg-1.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain, auto;
   }
 }

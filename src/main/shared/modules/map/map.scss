@@ -4,4 +4,23 @@
   padding-left: 64px;
   width: 1744px;
   height: 1034px;
+  transition: .2s linear;
+
+  &--big {
+    width: 4096px;
+    height: 2033px;
+  }
+
+  &--in {
+    animation: in 1s linear;
+  }
+}
+
+@keyframes in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

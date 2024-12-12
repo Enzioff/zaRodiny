@@ -1,3 +1,6 @@
 import "./icon-arrow.svg"
 import "./map.svg"
+import "./map-2.svg"
+import "./map-3.svg"
 import "./icon-star.svg"
+import "./ship.svg"

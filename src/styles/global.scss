@@ -109,3 +109,19 @@ body {
   opacity: 0.7;
   pointer-events: none;
 }
+
+.trigger-interactive-map {
+  position: relative;
+}
+
+#path {
+  stroke-dasharray: 10, 10;
+}
+
+#icon-ship {
+  position: absolute;
+  bottom: 519px;
+  left: 64px;
+  width: 104px;
+  height: 84px;
+}

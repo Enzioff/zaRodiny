@@ -3,6 +3,11 @@
   flex-direction: column;
   gap: 40px;
 
+  &--full {
+    background-color: $white;
+    height: 100vh;
+  }
+
   &__text {
     font-size: 18px;
     font-weight: 700;
@@ -18,8 +23,9 @@
 
     &--grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: auto auto;
       justify-content: space-between;
+      width: 100%;
     }
   }
 
