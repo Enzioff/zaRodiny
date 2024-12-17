@@ -1,5 +1,7 @@
 import Swiper from "swiper";
 import {EffectCoverflow, Navigation, Pagination, Thumbs} from "swiper/modules";
+import {SwiperSlide} from "swiper/swiper-element";
+import {slideType} from "@fancyapps/ui/types/Carousel/types";
 
 class Slider {
     el;
@@ -142,8 +144,33 @@ class Slider {
                 nextEl: this.buttonNext,
                 disabledClass: 'swiper-button--disabled'
             },
+            on: {
+                slideChange: (el: Swiper) => {
+                    const index = el.realIndex;
+                    const picture = el.slides[index].querySelector('picture')
+                    if (index !== 1) {
+                        const hiddenPic = picture.querySelector('img')
+                        if (hiddenPic.classList.contains('hidden')) {
+                            picture.insertAdjacentHTML('beforeend', fishTemplate())
+                            const gif = picture.querySelector('.article-fish__video')
+                            if (gif) {
+                                setTimeout(() => {
+                                    gif.remove()
+                                    hiddenPic.classList.remove('hidden')
+                                }, 1000)
+                            }
+                        }
+                    }
+                }
+            }
         })
     }
+}
+
+const fishTemplate = () => {
+    return `
+        <img class="article-fish__video" src="./assets/images/fish-drop.gif" alt="">
+    `
 }
 
 export default Slider

@@ -21,4 +21,13 @@
     width: 570px;
     height: 426px;
   }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 1;
+    transform: scale(2);
+  }
 }

@@ -144,3 +144,11 @@ body {
 .trigger-map {
   overflow: hidden;
 }
+
+.build {
+  position: relative;
+  fill: none;
+  stroke-opacity: 0;
+  transition: .2s linear;
+  pointer-events: none;
+}
