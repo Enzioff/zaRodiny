@@ -1,5 +1,6 @@
 import Slider from "./slider";
 import Animation from "./animation/animation";
+import Sound from "./sound";
 class App {
     constructor() {
         this.init();
@@ -8,6 +9,7 @@ class App {
     init = () => {
         new Animation()
         this.createSlider()
+        this.createSound()
     }
 
     createSlider = () => {
@@ -16,6 +18,10 @@ class App {
         sliders.forEach(slider => {
             new Slider(slider)
         })
+    }
+    
+    createSound = () => {
+        new Sound();
     }
 }
 

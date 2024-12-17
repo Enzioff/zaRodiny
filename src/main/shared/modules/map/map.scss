@@ -9,6 +9,9 @@
   &--big {
     width: 4096px;
     height: 2033px;
+    @include r(1920) {
+      transform: scale(0.6) translateX(-25%);
+    }
   }
 
   &--in {

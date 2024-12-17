@@ -25,7 +25,6 @@ class MapAnimation {
         
         const mapContainer = document.querySelector('.trigger-interactive-map')
         const infoBlocks = document.querySelector('.trigger-info');
-        const shipsBlock = document.querySelector('.trigger-ships');
         
         mapTimeline
             .to(mapContainer, {

@@ -6,4 +6,17 @@
   align-items: center;
   gap: 30px;
   cursor: pointer;
+
+  &:hover {
+    .info-label {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    width: 55px;
+    height: 45px;
+  }
 }

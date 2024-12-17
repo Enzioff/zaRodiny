@@ -10,6 +10,12 @@ class Animation {
         this.lastScrollTop = 0;
         
         this.init()
+        
+        window.addEventListener('load', () => {
+            ScrollTrigger.getAll().forEach(el => {
+                el.refresh()
+            })
+        })
     }
     
     init() {
@@ -18,7 +24,6 @@ class Animation {
         this.intro()
         this.shipBlock()
         new MapAnimation()
-        ScrollTrigger.refresh()
         
         ScrollTrigger.create({
             trigger: '.trigger-video',
@@ -117,12 +122,6 @@ class Animation {
             start: 'top top+=60',
             end: '+=2000',
             pin: true,
-            onToggle: self => {
-                if (self.isActive) {
-                    self.refresh()
-                    self.update()
-                }
-            },
             onLeave: self => {
                 const scrollReturn = (evt: Event) => {
                     evt.preventDefault()
