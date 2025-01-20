@@ -20,7 +20,6 @@ class Animation {
     
     init() {
         this.registerPlugins()
-        this.headerAnimation()
         this.intro()
         this.shipBlock()
         new MapAnimation()
@@ -44,39 +43,6 @@ class Animation {
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
     }
     
-    headerAnimation = () => {
-        window.addEventListener('scroll', () => {
-            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const images = document.querySelectorAll('.header img') as NodeListOf<HTMLElement>;
-            const logo = document.querySelector('.logo') as HTMLHtmlElement;
-            
-            if (currentScrollTop > this.lastScrollTop) {
-                gsap.to('.header', {
-                    yPercent: -100,
-                    duration: 0.5,
-                })
-                images[0].classList.add('hidden')
-                images[1].classList.remove('hidden')
-                gsap.to(logo, {
-                    y: 81,
-                    duration: 1,
-                })
-            } else {
-                gsap.to('.header', {
-                    yPercent: 0,
-                    duration: 1,
-                })
-                images[0].classList.remove('hidden')
-                images[1].classList.add('hidden')
-                gsap.to(logo, {
-                    y: 0,
-                    duration: 1,
-                })
-            }
-            
-            this.lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-        });
-    }
     intro = () => {
         const section = document.querySelector('.trigger-intro');
         if (!section) return
@@ -96,7 +62,24 @@ class Animation {
             pin: true,
         })
         
-        console.log(totalHeight)
+        ScrollTrigger.create({
+            trigger: section,
+            start: `top top+=20`,
+            markers: true,
+            end: `+=${section.clientHeight + totalHeight}`,
+            onToggle: self => {
+                const images = document.querySelectorAll('.header img') as NodeListOf<HTMLElement>;
+                
+                if (self.isActive) {
+                    images[0].classList.remove('hidden')
+                    images[1].classList.add('hidden')
+                } else {
+                    images[0].classList.add('hidden')
+                    images[1].classList.remove('hidden')
+                }
+            }
+        })
+        
         gsap.set(timeline, {
             x: totalHeight + 278,
         })
