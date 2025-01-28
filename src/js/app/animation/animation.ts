@@ -65,7 +65,6 @@ class Animation {
         ScrollTrigger.create({
             trigger: section,
             start: `top top+=20`,
-            markers: true,
             end: `+=${section.clientHeight + totalHeight}`,
             onToggle: self => {
                 const images = document.querySelectorAll('.header img') as NodeListOf<HTMLElement>;

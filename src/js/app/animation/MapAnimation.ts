@@ -26,6 +26,10 @@ class MapAnimation {
         const mapContainer = document.querySelector('.trigger-interactive-map')
         const infoBlocks = document.querySelector('.trigger-info');
         
+        const windowWidth = window.innerWidth;
+        
+        console.log(windowWidth)
+        
         mapTimeline
             .to(mapContainer, {
                 scale: 15,
@@ -163,9 +167,9 @@ class MapAnimation {
                         duration: 1,
                     })
                     mapTimeline.to(mapContainer, {
-                        scale: 5.5,
-                        xPercent: 171,
-                        yPercent: -153,
+                        scale: windowWidth > 1920 ? 5.5 : 9.5,
+                        xPercent: windowWidth > 1920 ? 171 : 70,
+                        yPercent: windowWidth > 1920 ? -153 : -157,
                         duration: 5,
                         onStart: () => {
                             infoTimeline.to(infoBlocks, {
