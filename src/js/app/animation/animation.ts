@@ -5,9 +5,11 @@ import ScrollToPlugin from "gsap/ScrollToPlugin"
 
 class Animation {
     lastScrollTop;
+    header;
     
     constructor() {
         this.lastScrollTop = 0;
+        this.header = document.querySelector('.header');
         
         this.init()
         
@@ -36,6 +38,34 @@ class Animation {
                     video.remove();
                 });
             }
+        })
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (window.pageYOffset >= 2500) {
+                if (currentScroll > this.lastScrollTop) {
+                    gsap.to(this.header, {
+                        yPercent: -130,
+                        duration: 0.3,
+                        ease: 'none'
+                    })
+                } else if (currentScroll < this.lastScrollTop) {
+                    gsap.to(this.header, {
+                        yPercent: 0,
+                        duration: 0.3,
+                        ease: 'none'
+                    })
+                }
+            } else {
+                gsap.to(this.header, {
+                    yPercent: 0,
+                    duration: 0.1,
+                    ease: 'none'
+                })
+            }
+            
+            this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Убедимся, что значение не отрицательное
         })
     }
     
