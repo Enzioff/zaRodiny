@@ -95,13 +95,14 @@ class Animation {
         })
     }
     shipBlock = () => {
+        const windowWidth = window.innerWidth;
         const section = document.querySelector('.trigger-ships');
         gsap.set(section, {
             y: -1430,
         })
         ScrollTrigger.create({
             trigger: section,
-            start: 'top top+=60',
+            start: windowWidth > 1920 ? 'top top+=60' : 'top top-=30',
             end: '+=2000',
             pin: true,
             onLeave: self => {
