@@ -1,0 +1,42 @@
+.article-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 36px;
+  min-width: 150px;
+  border-radius: 50px;
+  background: #3E3E3E80;
+  border: 1px solid #FFFFFF33;
+  cursor: pointer;
+
+  &.active {
+    background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #D4AC55 0%, #6E592C 100%);
+    background-size: cover;
+    background-position: center;
+    border-color: transparent;
+
+    .article-brand__text {
+      color: $white;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 116%;
+    letter-spacing: 0%;
+    color: $white;
+  }
+}

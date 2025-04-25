@@ -1,0 +1,214 @@
+.interactive-map {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .container {
+    z-index: 10;
+  }
+
+  &__info {
+    position: absolute;
+    padding-top: 100px;
+  }
+
+  &__element {
+    display: none;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 66%;
+    background: linear-gradient(180deg, #D5EEFF 12.64%, rgba(213, 238, 255, 0.836044) 37.85%, rgba(213, 238, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: .2s linear;
+  }
+
+  &.active {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 1861px;
+    height: 100%;
+    max-height: 791px;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__pin {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #D4AC55 0%, #6E592C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 4px 10px 40px 0 #C60A0A33;
+
+    &::before {
+      content: '';
+      display: flex;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 55px;
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 13px 10px 13px 15px;
+    width: max-content;
+    font-weight: 700;
+    font-size: 17px;
+    color: $white;
+    border-radius: 56px;
+    background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #D4AC55 0%, #6E592C 100%);
+    transform: translateY(-50%);
+
+    span {
+      padding-top: 2px;
+    }
+
+    &--red {
+      background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #E31E1E 0%, #6E2C2C 100%);
+    }
+  }
+
+  &__marker {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    z-index: 2;
+    cursor: pointer;
+
+    &:nth-child(1) {
+      left: 228px;
+      top: 309px;
+    }
+    &:nth-child(2) {
+      top: 510px;
+      left: 257px;
+
+      .interactive-map__pin {
+        background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #E31E1E 0%, #6E2C2C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      }
+    }
+    &:nth-child(3) {
+      top: 628px;
+      left: 210px;
+    }
+    &:nth-child(4) {
+      top: 721px;
+      left: 397px;
+    }
+  }
+
+  &__detail {
+    position: absolute;
+    top: 180px;
+    left: 60%;
+    z-index: 10;
+  }
+
+  &__item {
+    display: none;
+    flex-direction: column;
+    gap: 25px;
+    padding: 23px 38px;
+    border: 2px solid #D4AC55;
+    background-color: $white;
+    border-radius: 15px;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__head {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 100%;
+    color: #151515;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__el {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 10px;
+
+    &:not(:first-child) {
+      padding-top: 10px;
+      border-top: 1px solid #357B9D;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    span {
+      &:first-child {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 100%;
+        color: transparent;
+        background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #D4AC55 0%, #6E592C 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      &:last-child {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 100%;
+        color: #272727;
+      }
+    }
+  }
+}

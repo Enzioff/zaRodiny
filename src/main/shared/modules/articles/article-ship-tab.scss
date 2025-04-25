@@ -1,0 +1,58 @@
+.article-ship-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px;
+  width: 268px;
+  height: 130px;
+  background-color: #F0F0F0;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: .2s;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 14px;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 17px;
+    text-align: center;
+    color: $dark;
+    transition: .2s;
+  }
+
+  &__notation {
+    display: flex;
+    width: fit-content;
+    padding: 5px 12px 8px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+    color: $dark;
+    border: 1px solid #030303;
+    border-radius: 100px;
+    transition: .2s;
+  }
+
+  &__picture {
+    display: flex;
+    flex-shrink: 0;
+    margin-left: -2px;
+    width: 135px;
+    height: 130px;
+    filter: grayscale(100%);
+    border-radius: 100px;
+    overflow: hidden;
+    transition: .2s;
+
+    img {
+      @include coverFull();
+    }
+  }
+}

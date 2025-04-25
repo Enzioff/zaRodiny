@@ -1,0 +1,17 @@
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-shrink: 0;
+  max-height: 86px;
+  z-index: 1;
+
+  img:nth-child(1) {
+    max-width: 161px;
+  }
+
+  img:nth-child(2) {
+    max-width: 87px;
+  }
+}

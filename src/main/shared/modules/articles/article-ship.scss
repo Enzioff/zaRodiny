@@ -1,0 +1,37 @@
+.article-ship {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    position: absolute;
+    top: -14px;
+    right: 0;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 110px;
+    line-height: 80%;
+    letter-spacing: -5px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &__picture {
+    display: flex;
+    flex-shrink: 0;
+    padding-top: 112px;
+    width: 788px;
+    height: 604px;
+    border-radius: 411px;
+    overflow: hidden;
+    transform: translateX(-80px);
+    z-index: 1;
+
+    img {
+      @include coverFull();
+    }
+  }
+}

@@ -1,0 +1,252 @@
+.action-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  svg {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    position: absolute;
+
+    &:hover {
+      .action-map__info {
+        opacity: 1;
+      }
+    }
+
+    &:nth-child(1) {
+      top: 509px;
+      left: 878px;
+
+      &:hover {
+        & ~ svg g #building-1,
+        & ~ svg g #image1_2421_881 {
+          opacity: 1;
+        }
+      }
+    }
+    &:nth-child(2) {
+      top: 392px;
+      left: 458px;
+
+      &:hover {
+        & ~ svg g #building-2,
+        & ~ svg g #image2_2421_881 {
+          opacity: 1;
+        }
+      }
+    }
+    &:nth-child(3) {
+      top: 451px;
+      left: 1409px;
+
+      &:hover {
+        & ~ svg g #building-3,
+        & ~ svg g #image3_2421_881 {
+          opacity: 1;
+        }
+      }
+    }
+    &:nth-child(4) {
+      top: 306px;
+      left: 1122px;
+
+      &:hover {
+        & ~ svg g #building-5,
+        & ~ svg g #image4_2421_881 {
+          opacity: 1;
+        }
+      }
+    }
+    &:nth-child(5) {
+      top: 379px;
+      left: 1160px;
+
+      &:hover {
+        & ~ svg g #building-6,
+        & ~ svg g #image5_2421_881 {
+          opacity: 1;
+        }
+      }
+    }
+    &:nth-child(6) {
+      top: 330px;
+      left: 1469px;
+
+      &:hover {
+        & ~ svg g #building-7,
+        & ~ svg g #image6_2421_881 {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    display: flex;
+    flex-shrink: 0;
+    padding: 10px 11px;
+    width: max-content;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #151515;
+    background-color: $white;
+    border-radius: 7px;
+    opacity: 0;
+    transition: .2s linear;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &__pin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #E32125;
+    box-shadow: 4px 10px 40px 0 #C60A0A33;
+    cursor: pointer;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      display: flex;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background-color: $white;
+    }
+  }
+
+  #image1_2421_881 {
+    opacity: 0;
+    transition: .2s linear;
+  }
+  #image2_2421_881 {
+    opacity: 0;
+    transition: .2s linear;
+  }
+  #image3_2421_881 {
+    opacity: 0;
+    transition: .2s linear;
+  }
+  #image4_2421_881 {
+    opacity: 0;
+    transition: .2s linear;
+  }
+  #image5_2421_881 {
+    opacity: 0;
+    transition: .2s linear;
+  }
+  #image6_2421_881 {
+    opacity: 0;
+    transition: .2s linear;
+  }
+
+  #building-1 {
+    fill: transparent;
+    opacity: 0;
+    transition: .2s linear;
+
+    &:hover {
+      opacity: 1;
+
+      & ~ defs #image1_2421_881{
+        opacity: 1;
+      }
+    }
+  }
+  #building-2 {
+    fill: transparent;
+    opacity: 0;
+    transition: .2s linear;
+
+    &:hover {
+      opacity: 1;
+
+      & ~ defs #image2_2421_881{
+        opacity: 1;
+      }
+    }
+  }
+  #building-3 {
+    fill: transparent;
+    opacity: 0;
+    transition: .2s linear;
+
+    &:hover {
+      opacity: 1;
+
+      & ~ defs #image3_2421_881{
+        opacity: 1;
+      }
+    }
+  }
+  #building-4 {
+    fill: transparent;
+    opacity: 0;
+    transition: .2s linear;
+
+    &:hover {
+      opacity: 1;
+
+      & ~ defs #image3_2421_881{
+        opacity: 1;
+      }
+    }
+  }
+  #building-5 {
+    fill: transparent;
+    opacity: 0;
+    transition: .2s linear;
+
+    &:hover {
+      opacity: 1;
+
+      & ~ defs #image4_2421_881{
+        opacity: 1;
+      }
+    }
+  }
+  #building-6 {
+    fill: transparent;
+    opacity: 0;
+    transition: .2s linear;
+
+    &:hover {
+      opacity: 1;
+
+      & ~ defs #image5_2421_881{
+        opacity: 1;
+      }
+    }
+  }
+  #building-7 {
+    fill: transparent;
+    opacity: 0;
+    transition: .2s linear;
+
+    &:hover {
+      opacity: 1;
+
+      & ~ defs #image6_2421_881{
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  &__icon {
+    display: flex;
+    width: 28px;
+    height: 28px;
+  }
+
+  &__link {
+    display: flex;
+    transition: .2s linear;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

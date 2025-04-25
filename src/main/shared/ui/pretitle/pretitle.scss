@@ -1,0 +1,40 @@
+.pretitle {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0.02em;
+  color: transparent;
+  background: $grad-accent;
+  background-clip: text;
+
+  &--main {
+    font-size: 30px;
+    line-height: 45px;
+    background: none;
+    color: $white;
+  }
+
+  &--accent {
+    background: none;
+    color: $accent-second;
+  }
+
+  &--light {
+    color: $white;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--black {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    background: none;
+    color: #000000;
+  }
+}

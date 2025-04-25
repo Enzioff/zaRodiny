@@ -1,0 +1,85 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+
+  &__body {
+    display: flex;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 638px;
+    padding-top: 246px;
+    padding-bottom: 90px;
+  }
+
+  &__element {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__preview {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 100%;
+    letter-spacing: -5px;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -2%;
+    color: $white;
+  }
+
+  &__detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    width: 228px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    background: linear-gradient(180deg, #E90005 0%, #E32125 100%);
+    border-radius: 56px;
+    cursor: pointer;
+
+    &--gold {
+      background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #D4AC55 0%, #6E592C 100%)
+    }
+  }
+}

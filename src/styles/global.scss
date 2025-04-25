@@ -1,0 +1,154 @@
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+  min-height: 100vh;
+
+  font-family: $font-main;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1;
+
+  background-color: $white;
+  overflow-x: hidden;
+}
+
+.main {
+  flex-grow: 1;
+  overflow-x: clip;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.mob-hidden {
+  @include r($mobile) {
+    display: none;
+  }
+}
+
+.desktop-hidden {
+  @include rmin($mobile + 1) {
+    display: none;
+  }
+}
+
+.fixed {
+  overflow: hidden;
+}
+
+.order {
+  &--1 {
+    order: 1;
+  }
+
+  &--2 {
+    order: 2;
+  }
+
+  &--3 {
+    order: 3;
+  }
+
+  &--4 {
+    order: 4;
+  }
+
+  &--5 {
+    order: 5;
+  }
+
+  &-mob {
+    &--1 {
+      @include r($mobile) {
+        order: 1;
+      }
+    }
+
+    &--2 {
+      @include r($mobile) {
+        order: 2;
+      }
+    }
+
+    &--3 {
+      @include r($mobile) {
+        order: 3;
+      }
+    }
+
+    &--4 {
+      @include r($mobile) {
+        order: 4;
+      }
+    }
+
+    &--5 {
+      @include r($mobile) {
+        order: 5;
+      }
+    }
+  }
+}
+
+*[disabled] {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.trigger-interactive-map {
+  position: relative;
+}
+
+#path {
+  stroke-dasharray: 10, 10;
+}
+
+#icon-ship {
+  position: absolute;
+  bottom: 519px;
+  left: 64px;
+  width: 104px;
+  height: 84px;
+}
+
+.fish-in {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 88%;
+  z-index: 2;
+  aspect-ratio: 16 / 9;
+  pointer-events: none;
+}
+
+.trigger-map {
+  overflow: hidden;
+}
+
+.build {
+  position: relative;
+  fill: none;
+  stroke-opacity: 0;
+  transition: .2s linear;
+  pointer-events: none;
+}

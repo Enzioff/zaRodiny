@@ -1,0 +1,15 @@
+.article-preview {
+  display: flex;
+  transform: translateX(-100px) translateY(100px);
+  pointer-events: none;
+
+  &--gold {
+    transform: translateX(-160px) translateY(100px);
+  }
+
+  &__picture {
+    display: flex;
+    width: 715px;
+    height: 680px;
+  }
+}

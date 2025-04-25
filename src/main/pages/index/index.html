@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%= htmlWebpackPlugin.options.widgets.head %>
+<body class="">
+<%= htmlWebpackPlugin.options.widgets.header %>
+<main class="main">
+    <section class="section trigger-intro section--intro">
+        <div class="slider slider--video" data-slider="default">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <video class="intro-video" autoplay loop muted playsInline poster="./assets/images/intro-bg.jpg">
+                            <source src="./assets/images/video-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video class="intro-video" autoplay loop muted playsInline poster="./assets/images/intro-bg.jpg">
+                            <source src="./assets/images/video-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="swiper-slide">
+                        <video class="intro-video" autoplay loop muted playsInline poster="./assets/images/intro-bg.jpg">
+                            <source src="./assets/images/video-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="intro">
+                <div class="play-sound">
+                    <div class="info-label">
+                        <p class="info-label__text">Включите звук !</p>
+                    </div>
+                    <img class="play-sound__icon" src="./assets/images/icon-play-sound.svg" alt="">
+                    <img class="play-sound__icon hidden" src="./assets/images/icon-stop-sound.svg" alt="">
+                </div>
+                <div class="grid mb-60">
+                    <div class="grid__item grid__item--7">
+                        <div class="head head--main">
+                            <p class="pretitle pretitle--main">Как мы производим</p>
+                            <h1 class="title title--main title--invert">
+                                150 миллионов банок в год
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="grid__item grid__item--5"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section--full trigger-map section--map section--light">
+        <div class="interactive-map" data-tabs>
+            <div class="container">
+                <div class="interactive-map__info">
+                    <div class="interactive-map__element active">
+                        <div class="head">
+                            <p class="pretitle">Представленность продукции</p>
+                            <h2 class="title">
+                                58 регионов РФ, 8 стран СНГ
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="interactive-map__element">
+                        <div class="head">
+                            <p class="pretitle">Как мы добываем рыбу</p>
+                            <h2 class="title">
+                                4 ПРОИЗВОДСТВЕННЫЕ БАЗЫ
+                            </h2>
+                            <p class="info__text">
+                                Добыча и сортировка происходит в Калининградской области, Махачкале и Усть-Луге.<br>
+                                Консервные заводы располагаются в Калиниградской области и в Керчи.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="interactive-map__element">
+                        <div class="head">
+                            <p class="pretitle">Как мы добываем рыбу</p>
+                            <h2 class="title">
+                                Цех сортировки и заморозки
+                            </h2>
+                            <p class="info__text">
+                                Собственный флот, цех сортировки и заморозки, консервный<br>
+                                завод, склад хранения готовой продукции и головной офис<br>
+                                группы компаний расположены в экологически чистом<br>
+                                регионе на побережье Балтийского моря.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-map__wrapper">
+                <div class="interactive-map__marker" data-tabs-header>
+                    <div class="interactive-map__pin"></div>
+                    <p class="interactive-map__text">
+                        <span>Цех сортировки и заморозки</span>
+                        <svg class="interactive-map__icon">
+                            <use xlink:href="./assets/sprite.svg#icon-question"></use>
+                        </svg>
+                    </p>
+                </div>
+                <div class="interactive-map__marker" data-tabs-header>
+                    <div class="interactive-map__pin"></div>
+                    <p class="interactive-map__text interactive-map__text--red">
+                        <span>За Родину</span>
+                        <svg class="interactive-map__icon">
+                            <use xlink:href="./assets/sprite.svg#icon-question"></use>
+                        </svg>
+                    </p>
+                </div>
+                <div class="interactive-map__marker" data-tabs-header>
+                    <div class="interactive-map__pin"></div>
+                    <p class="interactive-map__text">
+                        <span>Пролив 1873</span>
+                        <svg class="interactive-map__icon">
+                            <use xlink:href="./assets/sprite.svg#icon-question"></use>
+                        </svg>
+                    </p>
+                </div>
+                <div class="interactive-map__marker" data-tabs-header>
+                    <div class="interactive-map__pin"></div>
+                    <p class="interactive-map__text">
+                        <span>Цех сортировки и заморозки</span>
+                        <svg class="interactive-map__icon">
+                            <use xlink:href="./assets/sprite.svg#icon-question"></use>
+                        </svg>
+                    </p>
+                </div>
+                <picture class="interactive-map__picture">
+                    <img src="./assets/images/map-stage-1.png" alt="">
+                </picture>
+            </div>
+            <div class="interactive-map__detail">
+                <div class="interactive-map__item" data-tabs-item>
+                    <h3 class="interactive-map__head">
+                        Цех заморозки<br>
+                        Усть-Луга
+                    </h3>
+                    <ul class="interactive-map__list">
+                        <li class="interactive-map__el">
+                            <span>2 МРТК</span>
+                            <span>Выловов</span>
+                        </li>
+                        <li class="interactive-map__el">
+                            <span>2 000</span>
+                            <span>Тонн склада продукции</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="interactive-map__item" data-tabs-item>
+                    <h3 class="interactive-map__head">
+                        За Родину
+                    </h3>
+                    <ul class="interactive-map__list">
+                        <li class="interactive-map__el">
+                            <span>до 120 тонн в сутки</span>
+                            <span>Цех сортировки и заморозки</span>
+                        </li>
+                        <li class="interactive-map__el">
+                            <span>120 млн банок в год</span>
+                            <span>Завод</span>
+                        </li>
+                        <li class="interactive-map__el">
+                            <span>на 13 млн банок</span>
+                            <span>Склад готовой продукции</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="interactive-map__item" data-tabs-item>
+                    <h3 class="interactive-map__head">
+                        Пролив 1873
+                    </h3>
+                    <ul class="interactive-map__list">
+                        <li class="interactive-map__el">
+                            <span>2 МРТК</span>
+                            <span>Выловов</span>
+                        </li>
+                        <li class="interactive-map__el">
+                            <span>2 000</span>
+                            <span>Тонн склада продукции</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="interactive-map__item" data-tabs-item>
+                    <h3 class="interactive-map__head">
+                        Цех сортировки и<br>
+                        заморозки
+                    </h3>
+                    <ul class="interactive-map__list">
+                        <li class="interactive-map__el">
+                            <span>до 120 тонн в сутки</span>
+                            <span>Цех сортировки и заморозки</span>
+                        </li>
+                        <li class="interactive-map__el">
+                            <span>120 млн банок в год</span>
+                            <span>Завод</span>
+                        </li>
+                        <li class="interactive-map__el">
+                            <span>на 13 млн банок</span>
+                            <span>Склад готовой продукции</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%= htmlWebpackPlugin.options.widgets.BuildingMap %>
+    <section class="section trigger-ships pt-170 pb-120">
+        <div class="container">
+            <div class="slider slider--visible mb-60" data-slider="thumbs">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="grid">
+                                <div class="grid__item grid__item--5">
+                                    <div class="info">
+                                        <div class="head">
+                                            <p class="pretitle">Морской флот</p>
+                                            <h2 class="title">
+                                                Судно<br>
+                                                ”за родину”
+                                            </h2>
+                                        </div>
+                                        <p class="info__text">
+                                            Картельные сговоры не допускают ситуации, при которой активно развивающиеся
+                                            страны третьего
+                                            мира описаны максимально подробно. Картельные сговоры не допускают ситуации,
+                                            при которой
+                                            базовые сценарии поведения пользователей, инициированные исключительно
+                                            синтетически.
+                                        </p>
+                                        <div class="info__list">
+                                            <article class="article-info">
+                                                <h3 class="article-info__title">1 000 000 км</h3>
+                                                <p class="article-info__text">пройденного пути</p>
+                                            </article>
+                                            <article class="article-info">
+                                                <h3 class="article-info__title">7 000 дней</h3>
+                                                <p class="article-info__text">в успешном плавании</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__item grid__item--7">
+                                    <article class="article-ship">
+                                        <h3 class="article-ship__title">
+                                            судно<br>
+                                            ”за родину”
+                                        </h3>
+                                        <picture class="article-ship__picture">
+                                            <img src="./assets/images/ship-1.png" alt="">
+                                        </picture>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="grid">
+                                <div class="grid__item grid__item--5">
+                                    <div class="info">
+                                        <div class="head">
+                                            <p class="pretitle">Морской флот</p>
+                                            <h2 class="title">
+                                                МРТК Агат
+                                            </h2>
+                                        </div>
+                                        <p class="info__text">
+                                            Картельные сговоры не допускают ситуации, при которой активно развивающиеся
+                                            страны третьего
+                                            мира описаны максимально подробно. Картельные сговоры не допускают ситуации,
+                                            при которой
+                                            базовые сценарии поведения пользователей, инициированные исключительно
+                                            синтетически.
+                                        </p>
+                                        <div class="info__list">
+                                            <article class="article-info">
+                                                <h3 class="article-info__title">1 000 000 км</h3>
+                                                <p class="article-info__text">пройденного пути</p>
+                                            </article>
+                                            <article class="article-info">
+                                                <h3 class="article-info__title">7 000 дней</h3>
+                                                <p class="article-info__text">в успешном плавании</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__item grid__item--7">
+                                    <article class="article-ship">
+                                        <h3 class="article-ship__title">
+                                            МРТК Агат
+                                        </h3>
+                                        <picture class="article-ship__picture">
+                                            <img src="./assets/images/ship-2.png" alt="">
+                                        </picture>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="grid">
+                                <div class="grid__item grid__item--5">
+                                    <div class="info">
+                                        <div class="head">
+                                            <p class="pretitle">Морской флот</p>
+                                            <h2 class="title">
+                                                Даугава
+                                            </h2>
+                                        </div>
+                                        <p class="info__text">
+                                            Картельные сговоры не допускают ситуации, при которой активно развивающиеся
+                                            страны третьего
+                                            мира описаны максимально подробно. Картельные сговоры не допускают ситуации,
+                                            при которой
+                                            базовые сценарии поведения пользователей, инициированные исключительно
+                                            синтетически.
+                                        </p>
+                                        <div class="info__list">
+                                            <article class="article-info">
+                                                <h3 class="article-info__title">1 000 000 км</h3>
+                                                <p class="article-info__text">пройденного пути</p>
+                                            </article>
+                                            <article class="article-info">
+                                                <h3 class="article-info__title">7 000 дней</h3>
+                                                <p class="article-info__text">в успешном плавании</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__item grid__item--7">
+                                    <article class="article-ship">
+                                        <h3 class="article-ship__title">
+                                            Даугава
+                                        </h3>
+                                        <picture class="article-ship__picture">
+                                            <img src="./assets/images/ship-3.png" alt="">
+                                        </picture>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="grid">
+                                <div class="grid__item grid__item--5">
+                                    <div class="info">
+                                        <div class="head">
+                                            <p class="pretitle">Морской флот</p>
+                                            <h2 class="title">
+                                                Даугава
+                                            </h2>
+                                        </div>
+                                        <p class="info__text">
+                                            Картельные сговоры не допускают ситуации, при которой активно развивающиеся
+                                            страны третьего
+                                            мира описаны максимально подробно. Картельные сговоры не допускают ситуации,
+                                            при которой
+                                            базовые сценарии поведения пользователей, инициированные исключительно
+                                            синтетически.
+                                        </p>
+                                        <div class="info__list">
+                                            <article class="article-info">
+                                                <h3 class="article-info__title">1 000 000 км</h3>
+                                                <p class="article-info__text">пройденного пути</p>
+                                            </article>
+                                            <article class="article-info">
+                                                <h3 class="article-info__title">7 000 дней</h3>
+                                                <p class="article-info__text">в успешном плавании</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__item grid__item--7">
+                                    <article class="article-ship">
+                                        <h3 class="article-ship__title">
+                                            Даугава
+                                        </h3>
+                                        <picture class="article-ship__picture">
+                                            <img src="./assets/images/ship-3.png" alt="">
+                                        </picture>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider slider--thumb-auto slider--center" data-slider="thumb" data-slides="3">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="article-ship-tab">
+                                <picture class="article-ship-tab__picture">
+                                    <img src="./assets/images/ship-rodina.jpg" alt="">
+                                </picture>
+                                <div class="article-ship-tab__info">
+                                    <p class="article-ship-tab__text">
+                                        Судно “За<br>
+                                        Родину”
+                                    </p>
+                                    <p class="article-ship-tab__notation">1 млн. км</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="article-ship-tab">
+                                <picture class="article-ship-tab__picture">
+                                    <img src="./assets/images/ship-rodina.jpg" alt="">
+                                </picture>
+                                <div class="article-ship-tab__info">
+                                    <p class="article-ship-tab__text">
+                                        Судно “За<br>
+                                        Родину”
+                                    </p>
+                                    <p class="article-ship-tab__notation">1 млн. км</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="article-ship-tab">
+                                <picture class="article-ship-tab__picture">
+                                    <img src="./assets/images/ship-rodina.jpg" alt="">
+                                </picture>
+                                <div class="article-ship-tab__info">
+                                    <p class="article-ship-tab__text">
+                                        Судно “За<br>
+                                        Родину”
+                                    </p>
+                                    <p class="article-ship-tab__notation">1 млн. км</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="article-ship-tab">
+                                <picture class="article-ship-tab__picture">
+                                    <img src="./assets/images/ship-rodina.jpg" alt="">
+                                </picture>
+                                <div class="article-ship-tab__info">
+                                    <p class="article-ship-tab__text">
+                                        Судно “За<br>
+                                        Родину”
+                                    </p>
+                                    <p class="article-ship-tab__notation">1 млн. км</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="swiper-control">
+                        <button class="swiper-btn swiper-btn--prev">
+                            <svg>
+                                <use xlink:href="./assets/sprite.svg#icon-arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="swiper-btn swiper-btn--next">
+                            <svg>
+                                <use xlink:href="./assets/sprite.svg#icon-arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="timeline trigger-timeline">
+            <div class="timeline__top">
+                <div class="container">
+                    <div class="head mb-70">
+                        <h2 class="title title--invert">
+                            Путь от моря до банки за 8 часов
+                        </h2>
+                    </div>
+                    <div class="timeline__line">
+                        <div class="timeline__header">
+                            <div class="timeline__time">
+                                <p>0:00 - 3:00</p>
+                            </div>
+                            <p class="timeline__text">
+                                Доставка улова по<br>
+                                Калининградскому каналу
+                            </p>
+                        </div>
+                        <div class="timeline__header">
+                            <div class="timeline__time">
+                                <p>3:00 - 3:40</p>
+                            </div>
+                            <p class="timeline__text">
+                                Разгрузка во Взморье через<br>
+                                вакуумные насосы
+                            </p>
+                        </div>
+                        <div class="timeline__header">
+                            <div class="timeline__time">
+                                <p>3:40 - 4:20</p>
+                            </div>
+                            <p class="timeline__text">
+                                Сортировка и отправка в<br>
+                                консервный цех
+                            </p>
+                        </div>
+                        <div class="timeline__header">
+                            <div class="timeline__time">
+                                <p>4:20 - 5:20</p>
+                            </div>
+                            <p class="timeline__text">
+                                Наколка на прутки и<br>
+                                подготовка к копчению
+                            </p>
+                        </div>
+                        <div class="timeline__header">
+                            <div class="timeline__time">
+                                <p>5:20 - 5:50</p>
+                            </div>
+                            <p class="timeline__text">
+                                Копчение на ольховой щепе
+                            </p>
+                        </div>
+                        <div class="timeline__header">
+                            <div class="timeline__time">
+                                <p>5:50 - 6:50</p>
+                            </div>
+                            <p class="timeline__text">
+                                Укладка копчёной рыбы в<br>
+                                банки вручную
+                            </p>
+                        </div>
+                        <div class="timeline__header">
+                            <div class="timeline__time">
+                                <p>6:50 - 7:50</p>
+                            </div>
+                            <p class="timeline__text">
+                                Закатка, автоклавирование,<br>
+                                отправка на склад
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline__body">
+                <div class="timeline__wrapper">
+                    <div class="container">
+                        <div class="timeline__item">
+                            <picture class="timeline__picture">
+                                <img src="./assets/images/tl-1.jpg" alt="">
+                            </picture>
+                            <div class="timeline__info">
+                                <img class="timeline__icon" src="./assets/images/icon-tl-1.svg" alt="">
+                                <h3 class="timeline__title">
+                                    Доставка улова по<br>
+                                    Калининградскому каналу
+                                </h3>
+                                <p class="timeline__content">
+                                    <b>Описание этапа пути:</b>
+                                    <span>
+                                        Картельные сговоры не допускают ситуации, при которой<br>
+                                        активно развивающиеся страны третьего мира описаны<br>
+                                        максимально подробно. Картельные сговоры не допускают<br>
+                                        ситуации, при которой базовые сценарии.Картельные сговоры<br>
+                                        не допускают ситуации, при которой базовые сценарии.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__wrapper">
+                    <div class="container">
+                        <div class="timeline__item">
+                            <picture class="timeline__picture">
+                                <img src="./assets/images/tl-2.jpg" alt="">
+                            </picture>
+                            <div class="timeline__info">
+                                <img class="timeline__icon" src="./assets/images/icon-tl-2.svg" alt="">
+                                <h3 class="timeline__title">
+                                    Разгрузка во Взморье<br>
+                                    через вакуумные насосы
+                                </h3>
+                                <p class="timeline__content">
+                                    <b>Описание этапа пути:</b>
+                                    <span>
+                                        Картельные сговоры не допускают ситуации, при которой<br>
+                                        активно развивающиеся страны третьего мира описаны<br>
+                                        максимально подробно. Картельные сговоры не допускают<br>
+                                        ситуации, при которой базовые сценарии.Картельные сговоры<br>
+                                        не допускают ситуации, при которой базовые сценарии.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__wrapper">
+                    <div class="container">
+                        <div class="timeline__item">
+                            <picture class="timeline__picture">
+                                <img src="./assets/images/tl-3.png" alt="">
+                            </picture>
+                            <div class="timeline__info">
+                                <img class="timeline__icon" src="./assets/images/icon-tl-3.svg" alt="">
+                                <h3 class="timeline__title">
+                                    Сортировка и отправка в<br>
+                                    консервный цех
+                                </h3>
+                                <p class="timeline__content">
+                                    <b>Описание этапа пути:</b>
+                                    <span>
+                                        Картельные сговоры не допускают ситуации, при которой<br>
+                                        активно развивающиеся страны третьего мира описаны<br>
+                                        максимально подробно. Картельные сговоры не допускают<br>
+                                        ситуации, при которой базовые сценарии.Картельные сговоры<br>
+                                        не допускают ситуации, при которой базовые сценарии.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__wrapper timeline__wrapper--black">
+                    <div class="container">
+                        <div class="timeline__item">
+                            <picture class="timeline__picture">
+                                <img src="./assets/images/tl-4.png" alt="">
+                            </picture>
+                            <div class="timeline__info">
+                                <img class="timeline__icon" src="./assets/images/icon-tl-4.svg" alt="">
+                                <h3 class="timeline__title">
+                                    Наколка на прутки и<br>
+                                    подготовка к копчению
+                                </h3>
+                                <p class="timeline__content">
+                                    <b>Описание этапа пути:</b>
+                                    <span>
+                                        Картельные сговоры не допускают ситуации, при которой<br>
+                                        активно развивающиеся страны третьего мира описаны<br>
+                                        максимально подробно. Картельные сговоры не допускают<br>
+                                        ситуации, при которой базовые сценарии.Картельные сговоры<br>
+                                        не допускают ситуации, при которой базовые сценарии.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__wrapper timeline__wrapper--black">
+                    <div class="container">
+                        <div class="timeline__item">
+                            <picture class="timeline__picture">
+                                <img src="./assets/images/tl-5.png" alt="">
+                            </picture>
+                            <div class="timeline__info">
+                                <img class="timeline__icon" src="./assets/images/icon-tl-5.svg" alt="">
+                                <h3 class="timeline__title">
+                                    Копчение на ольховой щепе
+                                </h3>
+                                <p class="timeline__content">
+                                    <b>Описание этапа пути:</b>
+                                    <span>
+                                        Картельные сговоры не допускают ситуации, при которой<br>
+                                        активно развивающиеся страны третьего мира описаны<br>
+                                        максимально подробно. Картельные сговоры не допускают<br>
+                                        ситуации, при которой базовые сценарии.Картельные сговоры<br>
+                                        не допускают ситуации, при которой базовые сценарии.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__wrapper timeline__wrapper--black">
+                    <div class="container">
+                        <div class="timeline__item">
+                            <picture class="timeline__picture">
+                                <img src="./assets/images/tl-6.png" alt="">
+                            </picture>
+                            <div class="timeline__info">
+                                <img class="timeline__icon" src="./assets/images/icon-tl-6.svg" alt="">
+                                <h3 class="timeline__title">
+                                    Укладка копчёной рыбы в<br>
+                                    банки вручную
+                                </h3>
+                                <p class="timeline__content">
+                                    <b>Описание этапа пути:</b>
+                                    <span>
+                                        Картельные сговоры не допускают ситуации, при которой<br>
+                                        активно развивающиеся страны третьего мира описаны<br>
+                                        максимально подробно. Картельные сговоры не допускают<br>
+                                        ситуации, при которой базовые сценарии.Картельные сговоры<br>
+                                        не допускают ситуации, при которой базовые сценарии.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__wrapper timeline__wrapper--red">
+                    <div class="container">
+                        <div class="timeline__item">
+                            <picture class="timeline__picture">
+                                <img src="./assets/images/tl-7.png" alt="">
+                            </picture>
+                            <div class="timeline__info">
+                                <img class="timeline__icon" src="./assets/images/icon-tl-7.svg" alt="">
+                                <h3 class="timeline__title">
+                                    Закатка, автоклавирование,<br>
+                                    отправка на склад
+                                </h3>
+                                <p class="timeline__content">
+                                    <b>Описание этапа пути:</b>
+                                    <span>
+                                        Картельные сговоры не допускают ситуации, при которой<br>
+                                        активно развивающиеся страны третьего мира описаны<br>
+                                        максимально подробно. Картельные сговоры не допускают<br>
+                                        ситуации, при которой базовые сценарии.Картельные сговоры<br>
+                                        не допускают ситуации, при которой базовые сценарии.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section--full section--fixed-size section--sea pt-60 pb-60" id="fishBlock"
+             style="overflow: hidden;">
+        <video class="video-bg" autoplay loop muted playsInline poster="./assets/images/intro-bg.jpg">
+            <source src="./assets/images/acua-bg.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="grid grid--center trigger-in">
+                <div class="grid__item grid__item--5">
+                    <div class="info mb-100">
+                        <div class="head">
+                            <p class="pretitle">Какую рыбу мы используем?</p>
+                            <h2 class="title title--invert">
+                                балтийская Килька
+                            </h2>
+                        </div>
+                        <p class="info__text info__text--light">
+                            Картельные сговоры не допускают ситуации, при которой активно развивающиеся страны третьего
+                            мира
+                            описаны максимально подробно базовые сценарии.
+                        </p>
+                    </div>
+                    <div class="feature-news">
+                        <div class="feature-news__item feature-news__item--blue">
+                            <div class="feature-news__rating rating">
+                                <svg class="rating__icon">
+                                    <use xlink:href="./assets/sprite.svg#icon-star"></use>
+                                </svg>
+                                5.0
+                            </div>
+                            <picture class="feature-news__picture">
+                                <img src="./assets/images/news-pic-1.png" alt="">
+                            </picture>
+                            <div class="feature-news__info">
+                                <h3 class="feature-news__title">
+                                    Что приготовить из балтиской кильки?
+                                </h3>
+                                <p class="feature-news__text">32 рецепта</p>
+                            </div>
+                            <a href="#" class="feature-news__button button button--slim">Подробнее</a>
+                        </div>
+                        <div class="feature-news__item feature-news__item--red">
+                            <picture class="feature-news__picture">
+                                <img src="./assets/images/news-pic-2.png" alt="">
+                            </picture>
+                            <div class="feature-news__info">
+                                <h3 class="feature-news__title">
+                                    Наша продукция с данным товаром
+                                </h3>
+                                <p class="feature-news__text">До 10 вариантов вкуса</p>
+                            </div>
+                            <a href="#" class="feature-news__button button button--slim">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__item grid__item--7">
+                    <div class="slider slider--vertical-visible slider--fixed-size" data-slider="vertical">
+                        <div class="swiper swiper-vertical">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <article class="article-fish">
+                                        <div class="article-fish__board">
+                                            <img src="./assets/images/board.png" alt="">
+                                            <picture class="article-fish__fish">
+                                                <img class="hidden" src="./assets/images/fish-2.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="article-fish article-fish--hidden">
+                                        <div class="article-fish__board">
+                                            <img src="./assets/images/board.png" alt="">
+                                            <picture class="article-fish__fish">
+                                                <img src="./assets/images/fish-1.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="article-fish">
+                                        <div class="article-fish__board">
+                                            <img src="./assets/images/board.png" alt="">
+                                            <picture class="article-fish__fish">
+                                                <img class="hidden" src="./assets/images/fish-3.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="article-fish">
+                                        <div class="article-fish__board">
+                                            <img src="./assets/images/board.png" alt="">
+                                            <picture class="article-fish__fish">
+                                                <img class="hidden" src="./assets/images/fish-2.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="article-fish">
+                                        <div class="article-fish__board">
+                                            <img src="./assets/images/board.png" alt="">
+                                            <picture class="article-fish__fish">
+                                                <img class="hidden" src="./assets/images/fish-1.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="article-fish">
+                                        <div class="article-fish__board">
+                                            <img src="./assets/images/board.png" alt="">
+                                            <picture class="article-fish__fish">
+                                                <img class="hidden" src="./assets/images/fish-3.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="swiper-control swiper-control--vertical">
+                                <button class="swiper-btn swiper-btn--prev">
+                                    <svg>
+                                        <use xlink:href="./assets/sprite.svg#icon-arrow"></use>
+                                    </svg>
+                                </button>
+                                <button class="swiper-btn swiper-btn--next">
+                                    <svg>
+                                        <use xlink:href="./assets/sprite.svg#icon-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section--full section--bg" style="background-image: url('./assets/images/wooden-bg.jpg')">
+        <div class="container" style="position: static;">
+            <div class="catalog" data-tabs>
+                <div class="brands">
+                    <article class="article-brand active" data-tabs-header>
+                        <p class="article-brand__text">За Родину</p>
+                    </article>
+                    <article class="article-brand" data-tabs-header>
+                        <p class="article-brand__text">Рыбная деревня</p>
+                    </article>
+                    <article class="article-brand" data-tabs-header>
+                        <p class="article-brand__text">Пролив</p>
+                    </article>
+                    <article class="article-brand" data-tabs-header>
+                        <p class="article-brand__text">Laatsa</p>
+                    </article>
+                    <article class="article-brand" data-tabs-header>
+                        <p class="article-brand__text">Baltic gold</p>
+                    </article>
+                </div>
+                <div class="catalog__body">
+                    <div class="catalog__element active" data-tabs-item>
+                        <div class="catalog__info">
+                            <div class="catalog__preview">
+                                <picture class="catalog__picture">
+                                    <img src="./assets/images/logo-new.svg" alt="">
+                                </picture>
+                                <h2 class="catalog__title">за родину</h2>
+                            </div>
+                            <p class="catalog__text">
+                                ГК "За Родину" является ведущим производителем готовой рыбной продукции и морепродуктов.<br>
+                                <br>
+                                Мы осуществляем полный цикл производства: от вылова рыбного сырья до реализации готовой
+                                рыбной продукции в торговых точках по доступным для покупателей ценам.
+                            </p>
+                            <button class="catalog__button">В Каталог</button>
+                            <div class="catalog__detail">
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-1.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>1974 года</b>
+                                        год основания<br>
+                                        компании "За Родину"
+                                    </p>
+                                </article>
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-1.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>1974 года</b>
+                                        год основания<br>
+                                        компании "За Родину"
+                                    </p>
+                                </article>
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-2.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>
+                                            представлены<br>
+                                            в 54 регионах России,
+                                        </b>
+                                        в 8 стран-партнерах
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="slider slider--preview" data-slider="catalog">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="article-preview">
+                                            <picture class="article-preview__picture">
+                                                <img src="./assets/images/slider-1.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="article-preview">
+                                            <picture class="article-preview__picture">
+                                                <img src="./assets/images/slider-1.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider__footer">
+                                    <div class="slider-control">
+                                        <button class="swiper-button swiper-btn--prev">
+                                            <svg>
+                                                <use xlink:href="./assets/sprite.svg#icon-pointer"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="swiper-button swiper-btn--next">
+                                            <svg>
+                                                <use xlink:href="./assets/sprite.svg#icon-pointer"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="slider__info">
+                                        <h3 class="slider__title">
+                                            Наша лучшая продукция
+                                        </h3>
+                                        <p class="slider__text">
+                                            Картельные сговоры не допускают ситуации, при которой активно развивающиеся
+                                            страны третьего мира описаны максимально подробно базовые сценарии.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__element" data-tabs-item>
+                        <div class="catalog__info">
+                            <div class="catalog__preview">
+                                <picture class="catalog__picture">
+                                    <img src="./assets/images/logo-new.svg" alt="">
+                                </picture>
+                                <h2 class="catalog__title">Рыбная деревня</h2>
+                            </div>
+                            <p class="catalog__text">
+                                ГК "За Родину" является ведущим производителем готовой рыбной продукции и морепродуктов.<br>
+                                <br>
+                                Мы осуществляем полный цикл производства: от вылова рыбного сырья до реализации готовой
+                                рыбной продукции в торговых точках по доступным для покупателей ценам.
+                            </p>
+                            <button class="catalog__button">В Каталог</button>
+                            <div class="catalog__detail">
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-1.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>1974 года</b>
+                                        год основания<br>
+                                        компании "За Родину"
+                                    </p>
+                                </article>
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-1.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>1974 года</b>
+                                        год основания<br>
+                                        компании "За Родину"
+                                    </p>
+                                </article>
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-2.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>
+                                            представлены<br>
+                                            в 54 регионах России,
+                                        </b>
+                                        в 8 стран-партнерах
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="slider slider--preview" data-slider="catalog">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="article-preview">
+                                            <picture class="article-preview__picture">
+                                                <img src="./assets/images/slider-1.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="article-preview">
+                                            <picture class="article-preview__picture">
+                                                <img src="./assets/images/slider-1.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider__footer">
+                                    <div class="slider-control">
+                                        <button class="swiper-button swiper-btn--prev">
+                                            <svg>
+                                                <use xlink:href="./assets/sprite.svg#icon-pointer"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="swiper-button swiper-btn--next">
+                                            <svg>
+                                                <use xlink:href="./assets/sprite.svg#icon-pointer"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="slider__info">
+                                        <h3 class="slider__title">
+                                            Наша лучшая продукция
+                                        </h3>
+                                        <p class="slider__text">
+                                            Картельные сговоры не допускают ситуации, при которой активно развивающиеся
+                                            страны третьего мира описаны максимально подробно базовые сценарии.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__element" data-tabs-item>
+                        <div class="catalog__info">
+                            <div class="catalog__preview">
+                                <picture class="catalog__picture">
+                                    <img src="./assets/images/logo-new.svg" alt="">
+                                </picture>
+                                <h2 class="catalog__title">Пролив</h2>
+                            </div>
+                            <p class="catalog__text">
+                                ГК "За Родину" является ведущим производителем готовой рыбной продукции и морепродуктов.<br>
+                                <br>
+                                Мы осуществляем полный цикл производства: от вылова рыбного сырья до реализации готовой
+                                рыбной продукции в торговых точках по доступным для покупателей ценам.
+                            </p>
+                            <button class="catalog__button">В Каталог</button>
+                            <div class="catalog__detail">
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-1.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>1974 года</b>
+                                        год основания<br>
+                                        компании "За Родину"
+                                    </p>
+                                </article>
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-1.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>1974 года</b>
+                                        год основания<br>
+                                        компании "За Родину"
+                                    </p>
+                                </article>
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-2.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>
+                                            представлены<br>
+                                            в 54 регионах России,
+                                        </b>
+                                        в 8 стран-партнерах
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="slider slider--preview" data-slider="catalog">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="article-preview">
+                                            <picture class="article-preview__picture">
+                                                <img src="./assets/images/slider-1.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="article-preview">
+                                            <picture class="article-preview__picture">
+                                                <img src="./assets/images/slider-1.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider__footer">
+                                    <div class="slider-control">
+                                        <button class="swiper-button swiper-btn--prev">
+                                            <svg>
+                                                <use xlink:href="./assets/sprite.svg#icon-pointer"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="swiper-button swiper-btn--next">
+                                            <svg>
+                                                <use xlink:href="./assets/sprite.svg#icon-pointer"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="slider__info">
+                                        <h3 class="slider__title">
+                                            Наша лучшая продукция
+                                        </h3>
+                                        <p class="slider__text">
+                                            Картельные сговоры не допускают ситуации, при которой активно развивающиеся
+                                            страны третьего мира описаны максимально подробно базовые сценарии.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__element" data-tabs-item>
+                        <div class="catalog__info">
+                            <div class="catalog__preview">
+                                <picture class="catalog__picture">
+                                    <img src="./assets/images/logo-new.svg" alt="">
+                                </picture>
+                                <h2 class="catalog__title">Laatsa</h2>
+                            </div>
+                            <p class="catalog__text">
+                                ГК "За Родину" является ведущим производителем готовой рыбной продукции и морепродуктов.<br>
+                                <br>
+                                Мы осуществляем полный цикл производства: от вылова рыбного сырья до реализации готовой
+                                рыбной продукции в торговых точках по доступным для покупателей ценам.
+                            </p>
+                            <button class="catalog__button catalog__button--gold">В Каталог</button>
+                            <div class="catalog__detail">
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-3.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>1974 года</b>
+                                        год основания<br>
+                                        компании "За Родину"
+                                    </p>
+                                </article>
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-3.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>1974 года</b>
+                                        год основания<br>
+                                        компании "За Родину"
+                                    </p>
+                                </article>
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-4.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>
+                                            представлены<br>
+                                            в 54 регионах России,
+                                        </b>
+                                        в 8 стран-партнерах
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="slider slider--preview slider--preview-red" data-slider="catalog">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="article-preview article-preview--gold">
+                                            <picture class="article-preview__picture">
+                                                <img src="./assets/images/slider-2.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="article-preview article-preview--gold">
+                                            <picture class="article-preview__picture">
+                                                <img src="./assets/images/slider-2.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider__footer">
+                                    <div class="slider-control">
+                                        <button class="swiper-button swiper-btn--prev">
+                                            <svg>
+                                                <use xlink:href="./assets/sprite.svg#icon-pointer"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="swiper-button swiper-btn--next">
+                                            <svg>
+                                                <use xlink:href="./assets/sprite.svg#icon-pointer"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="slider__info">
+                                        <h3 class="slider__title">
+                                            Наша лучшая продукция
+                                        </h3>
+                                        <p class="slider__text">
+                                            Картельные сговоры не допускают ситуации, при которой активно развивающиеся
+                                            страны третьего мира описаны максимально подробно базовые сценарии.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__element" data-tabs-item>
+                        <div class="catalog__info">
+                            <div class="catalog__preview">
+                                <picture class="catalog__picture">
+                                    <img src="./assets/images/logo-new.svg" alt="">
+                                </picture>
+                                <h2 class="catalog__title">Baltic gold</h2>
+                            </div>
+                            <p class="catalog__text">
+                                ГК "За Родину" является ведущим производителем готовой рыбной продукции и морепродуктов.<br>
+                                <br>
+                                Мы осуществляем полный цикл производства: от вылова рыбного сырья до реализации готовой
+                                рыбной продукции в торговых точках по доступным для покупателей ценам.
+                            </p>
+                            <button class="catalog__button catalog__button--gold">В Каталог</button>
+                            <div class="catalog__detail">
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-3.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>1974 года</b>
+                                        год основания<br>
+                                        компании "За Родину"
+                                    </p>
+                                </article>
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-3.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>1974 года</b>
+                                        год основания<br>
+                                        компании "За Родину"
+                                    </p>
+                                </article>
+                                <article class="article-stats">
+                                    <picture class="article-stats__picture">
+                                        <img src="./assets/images/stat-4.svg" alt="">
+                                    </picture>
+                                    <p class="article-stats__text">
+                                        <b>
+                                            представлены<br>
+                                            в 54 регионах России,
+                                        </b>
+                                        в 8 стран-партнерах
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="slider slider--preview slider--preview-red" data-slider="catalog">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="article-preview article-preview--gold">
+                                            <picture class="article-preview__picture">
+                                                <img src="./assets/images/slider-2.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="article-preview article-preview--gold">
+                                            <picture class="article-preview__picture">
+                                                <img src="./assets/images/slider-2.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider__footer">
+                                    <div class="slider-control">
+                                        <button class="swiper-button swiper-btn--prev">
+                                            <svg>
+                                                <use xlink:href="./assets/sprite.svg#icon-pointer"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="swiper-button swiper-btn--next">
+                                            <svg>
+                                                <use xlink:href="./assets/sprite.svg#icon-pointer"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="slider__info">
+                                        <h3 class="slider__title">
+                                            Наша лучшая продукция
+                                        </h3>
+                                        <p class="slider__text">
+                                            Картельные сговоры не допускают ситуации, при которой активно развивающиеся
+                                            страны третьего мира описаны максимально подробно базовые сценарии.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section--full section--bg pt-75 pb-80"
+             style="background-image: url('./assets/images/history-pattern.png'), url('./assets/images/history-bg.png');">
+        <video class="video-bg video-bg--top trigger-video" muted playsInline>
+            <source src="./assets/images/history.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="head mb-10">
+                <p class="pretitle pretitle--black">В озвучке от генерального директора</p>
+                <h2 class="title">
+                    История компании
+                </h2>
+            </div>
+            <div class="history mb-10">
+                <div class="history__item">
+                    <div class="grid">
+                        <div class="grid__item grid__item--3">
+                            <div class="history__element mt-34">
+                                <picture class="history__picture">
+                                    <img src="./assets/images/history-card-small.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="grid__item grid__item--9">
+                            <div class="history__element">
+                                <picture class="history__picture">
+                                    <img src="./assets/images/history-card.png" alt="">
+                                </picture>
+                                <p class="history__text">Основание рыболовецкого Колхоза “За Родину”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid__item grid__item--9"></div>
+                <div class="grid__item grid__item--3">
+                    <button class="button button--big">Читать историю</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pt-200 pb-80">
+        <div class="container">
+            <div class="grid">
+                <div class="grid__item grid__item--6">
+                    <div class="info">
+                        <div class="head">
+                            <h2 class="title">
+                                В будущее с нами
+                            </h2>
+                        </div>
+                        <p class="info__text">
+                            ГК "За Родину" является ведущим производителем готовой рыбной продукции и морепродуктов.<br>
+                            <br>
+                            Мы осуществляем полный цикл производства: от вылова рыбного сырья до реализации готовой
+                            рыбной продукции в торговых точках по доступным для покупателей ценам. Наличие самого
+                            современного высокопроизводительного оборудования, такого как: коптильных печей, больших
+                            провялочных камер и много.
+                        </p>
+                        <button class="button button--big">вакансии</button>
+                    </div>
+                </div>
+                <div class="grid__item grid__item--3"></div>
+                <div class="grid__item grid__item--3">
+                    <article class="article-stat">
+                        <div class="article-stat__item">
+                            <h3 class="article-stat__title">12 лет</h3>
+                            <p class="article-stat__text">Средний стаж работы</p>
+                        </div>
+                        <div class="article-stat__item">
+                            <h3 class="article-stat__title">100+</h3>
+                            <p class="article-stat__text">Открытых вакансий</p>
+                        </div>
+                        <div class="article-stat__item">
+                            <h3 class="article-stat__title">>2000 человек</h3>
+                            <p class="article-stat__text">Штат сотрудников</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="about">
+                <picture class="about__map">
+                    <img src="./assets/images/map-bg-1.png" alt="">
+                </picture>
+                <picture class="about__personal">
+                    <img src="./assets/images/personal.png" alt="">
+                </picture>
+            </div>
+            <div class="head mb-50">
+                <h2 class="title title--small">Жизнь компании</h2>
+            </div>
+            <div class="slider slider--auto mb-45" data-slider="default" data-slides="3">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="article-news">
+                                <picture class="article-news__picture">
+                                    <img src="./assets/images/news-1.jpg" alt="">
+                                </picture>
+                                <div class="article-news__info">
+                                    <time class="article-news__date">19.08.2024</time>
+                                    <h3 class="article-news__title">
+                                        Рыбопереработчик Лютаревич: чтобы зайти в КНР, нужны 3-4 года<br>
+                                        переговоров
+                                    </h3>
+                                    <p class="article-news__text">
+                                        Крупное перерабатывающее предприятие рыбохозяйственной отрасли стремится зайти
+                                        на азиатские рынки сбыта.
+                                    </p>
+                                    <a href="#" class="article-news__more">Подробнее</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="article-news">
+                                <picture class="article-news__picture">
+                                    <img src="./assets/images/news-2.jpg" alt="">
+                                </picture>
+                                <div class="article-news__info">
+                                    <time class="article-news__date">01.11.2023</time>
+                                    <h3 class="article-news__title">
+                                        Хорошей традицией становится зарыбление Калининградского залива молодью угря!
+                                    </h3>
+                                    <p class="article-news__text">
+                                        Второй год подряд главный ЗаРодинец Сергей Лютаревич вместе с губернатором
+                                        Калининградского региона Антоном...
+                                    </p>
+                                    <a href="#" class="article-news__more">Подробнее</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="article-news">
+                                <picture class="article-news__picture">
+                                    <img src="./assets/images/news-3.png" alt="">
+                                </picture>
+                                <div class="article-news__info">
+                                    <time class="article-news__date">23.11.2022</time>
+                                    <h3 class="article-news__title">
+                                        ГК «За Родину» экспортирует более 15 млн банок рыбных консервов в<br>
+                                        2022 году
+                                    </h3>
+                                    <p class="article-news__text">
+                                        Группа компаний «За Родину» планирует до конца 2022 года отправить на экспорт 15
+                                        млн банок рыбных консервов на сумму более...
+                                    </p>
+                                    <a href="#" class="article-news__more">Подробнее</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="article-news">
+                                <picture class="article-news__picture">
+                                    <img src="./assets/images/news-1.jpg" alt="">
+                                </picture>
+                                <div class="article-news__info">
+                                    <time class="article-news__date">19.08.2024</time>
+                                    <h3 class="article-news__title">
+                                        Рыбопереработчик Лютаревич: чтобы зайти в КНР, нужны 3-4 года<br>
+                                        переговоров
+                                    </h3>
+                                    <p class="article-news__text">
+                                        Крупное перерабатывающее предприятие рыбохозяйственной отрасли стремится зайти
+                                        на азиатские рынки сбыта.
+                                    </p>
+                                    <a href="#" class="article-news__more">Подробнее</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="swiper-control">
+                        <button class="swiper-btn swiper-btn--prev">
+                            <svg>
+                                <use xlink:href="./assets/sprite.svg#icon-arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="swiper-btn swiper-btn--next">
+                            <svg>
+                                <use xlink:href="./assets/sprite.svg#icon-arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="button button--big centered">все новости</a>
+        </div>
+    </section>
+</main>
+<%= htmlWebpackPlugin.options.widgets.footer %>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 12px 7px 13px;
+  width: fit-content;
+
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 0.02em;
+  color: $white;
+
+  border-radius: 0 0 20px 0;
+  background: $grad-blue-radial;
+
+  &--product {
+    padding: 11px 0;
+    width: 100%;
+    max-width: 87px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: initial;
+    text-align: center;
+    border-radius: 0 13px 0 13px;
+    box-shadow: 0 4px 4px 0 #0000001A;
+    background: $grad-red-radial;
+  }
+}

@@ -1,0 +1,45 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &--full {
+    background-color: $white;
+    height: 100vh;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -2%;
+    color: rgba(#000000, .7);
+
+    &--light {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+      color: $white;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+
+    &--grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__path {
+    position: absolute;
+    top: 105px;
+    left: -15px;
+    pointer-events: none;
+  }
+}

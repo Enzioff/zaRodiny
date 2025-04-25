@@ -1,0 +1,17 @@
+.article-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    color: $white;
+
+    b {
+      display: block;
+      font-weight: 700;
+    }
+  }
+}

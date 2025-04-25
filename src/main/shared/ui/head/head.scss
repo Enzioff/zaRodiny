@@ -1,0 +1,9 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &--main {
+    gap: 15px;
+  }
+}

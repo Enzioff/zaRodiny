@@ -1,0 +1,33 @@
+.article-fish {
+  display: flex;
+  transition: .2s linear;
+
+  &__board {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > img {
+      filter: grayscale(100%);
+    }
+  }
+
+  &__fish {
+    position: absolute;
+    top: 22%;
+    left: 0;
+    display: flex;
+    width: 570px;
+    height: 426px;
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 1;
+    transform: scale(2);
+  }
+}

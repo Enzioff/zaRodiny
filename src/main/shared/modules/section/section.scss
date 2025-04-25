@@ -1,0 +1,68 @@
+.section {
+  &--intro {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  &--combine {
+    position: relative;
+    height: 993px;
+
+    .container {
+      pointer-events: none;
+    }
+  }
+
+  &--relative {
+    position: relative;
+  }
+
+  &--light {
+    background-color: $white;
+  }
+
+  &--union {
+    position: relative;
+    //margin-top: -28px;
+    z-index: 2;
+  }
+
+  &--sea {
+    background-color: $blue;
+  }
+
+  &--fixed-size {
+    height: 1080px;
+
+    .container {
+      height: 100%;
+    }
+
+    .grid {
+      height: 100%;
+    }
+  }
+
+  &--map {
+    background-image: url("../assets/images/sea-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-color: #D5EEFF;
+    overflow: hidden;
+  }
+
+  &--full {
+    position: relative;
+    height: 100vh;
+    min-height: 980px;
+  }
+
+  &--bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
