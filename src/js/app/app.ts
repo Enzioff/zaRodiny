@@ -2,6 +2,8 @@ import Slider from "./slider";
 import Animation from "./animation/animation";
 import Sound from "./sound";
 import CustomTabs from "./customTabs";
+import ActionBlock from "./actionBlock";
+
 class App {
     constructor() {
         this.init();
@@ -12,6 +14,7 @@ class App {
         this.createSlider()
         this.createSound()
         this.createNewTabs()
+        this.createNewActionBlock()
     }
 
     createSlider = () => {
@@ -34,6 +37,14 @@ class App {
         tabsContainer.forEach(tab => {
             new CustomTabs(tab)
         })
+    }
+    
+    createNewActionBlock = () => {
+        const actionItems = document.querySelectorAll('[data-action-item]')
+        
+        if (!actionItems) return;
+        
+        new ActionBlock(actionItems)
     }
 }
 

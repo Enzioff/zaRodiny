@@ -3,6 +3,14 @@
   flex-direction: column;
   gap: 40px;
 
+  &--decor {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+
   &--full {
     background-color: $white;
     height: 100vh;
