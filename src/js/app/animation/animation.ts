@@ -126,14 +126,12 @@ class Animation {
     }
     shipBlock = () => {
         const windowWidth = window.innerWidth;
-        const section = document.querySelector('.trigger-ships');
-        gsap.set(section, {
-            y: -1430,
-        })
+        const section = document.querySelector('.trigger-timeline');
+
         ScrollTrigger.create({
             trigger: section,
-            start: windowWidth > 1920 ? 'top top+=60' : 'top top-=30',
-            end: '+=2000',
+            start: 'top top',
+            end: 'bottom center',
             pin: true,
             onLeave: self => {
                 const scrollReturn = (evt: Event) => {
@@ -223,6 +221,10 @@ class Animation {
             background: 'radial-gradient(114.82% 115.65% at -2.91% 16.22%, #E31E1E 0%, #6E2C2C 100%)',
             paused: true,
         })
+
+        const scrollReturn = (evt: Event) => {
+            evt.preventDefault()
+        }
         
         ScrollTrigger.create({
             trigger: '.trigger-timeline',
@@ -234,6 +236,42 @@ class Animation {
               if (self.isActive) {
                   self.refresh()
               }
+            },
+            onLeave: () => {
+                document.querySelector('.main').insertAdjacentHTML('beforeend', this.videoTemplate())
+                const video = document.querySelector('#deep-video') as HTMLVideoElement
+                video.classList.add('visible')
+                video.currentTime = 0;
+                video.play();
+                video.addEventListener('ended', function() {
+                    video.remove();
+                    gsap.to('.trigger-in', {
+                        opacity: 1,
+                        duration: 1,
+                    })
+                });
+                gsap.set('.trigger-in', {
+                    opacity: 0,
+                })
+                gsap.to(window, {
+                    scrollTo: '#fishBlock',
+                    duration: 2,
+                    onStart: () => {
+                        window.addEventListener('scroll', (evt) => scrollReturn(evt))
+                        const element = document.querySelector('.article-fish--hidden') as HTMLElement;
+                        element.style.opacity = '0';
+                    },
+                    onComplete: () => {
+                        window.removeEventListener('scroll', scrollReturn)
+                        document.querySelector('#fishBlock').insertAdjacentHTML('afterbegin', this.fishTemplate())
+                        const fish = document.querySelector('.fish-in')
+                        setTimeout(() => {
+                            fish.remove()
+                            const element = document.querySelector('.article-fish--hidden') as HTMLElement;
+                            element.style.opacity = '1';
+                        }, 2200)
+                    }
+                })
             },
             onUpdate: (self) => {
                 ScrollTrigger.update()

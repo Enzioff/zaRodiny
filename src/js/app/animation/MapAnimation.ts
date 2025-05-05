@@ -43,12 +43,12 @@ class MapAnimation {
                     this.infoElements[1].classList.add('active')
                 },
                 onComplete: () => {
-                    this.mapTrigger.style.backgroundImage = `url("../assets/images/sea-2.png")`
+                    this.mapTrigger.style.backgroundImage = `url("./assets/images/sea-2.png")`
                     this.infoElements.forEach(el => el.classList.remove('active'))
                     this.infoElements[2].classList.add('active')
                 },
                 onReverseComplete: () => {
-                    this.mapTrigger.style.backgroundImage = `url("../assets/images/sea-1.png")`
+                    this.mapTrigger.style.backgroundImage = `url("./assets/images/sea-1.png")`
                     this.mapContainer.classList.remove('active')
                     this.infoElements.forEach(el => el.classList.remove('active'))
                     this.infoElements[0].classList.add('active')
