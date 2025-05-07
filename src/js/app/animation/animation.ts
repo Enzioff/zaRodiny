@@ -2,6 +2,8 @@ import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger"
 import MapAnimation from "./MapAnimation";
 import ScrollToPlugin from "gsap/ScrollToPlugin"
+import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 
 class Animation {
     lastScrollTop;
@@ -190,54 +192,17 @@ class Animation {
     }
     
     timelineAnimation = () => {
-        const timeline = document.querySelector('.timeline__line') as HTMLElement;
-        const headerEls = document.querySelectorAll('.timeline__header');
-        const wraperEls = document.querySelectorAll('.timeline__wrapper');
-        const totalWidth = Array.from(headerEls).reduce((current, next) => {
-            return current + next.clientWidth;
-        }, 0)
-        
-        const clearClasses = () => {
-            wraperEls.forEach(el => el.classList.remove('active'))
-            headerEls.forEach(el => el.classList.remove('active'))
-        }
-        const updateEls = (position: number) => {
-            wraperEls[position].classList.add('active')
-            headerEls[position].classList.add('active')
-        }
-        
-        updateEls(0)
-        
-        const secondElAnimation = gsap.fromTo(wraperEls[2], {
-            background: 'linear-gradient(-118.96deg, #14282F 44.6%, #080D10 87.5%)',
-        }, {
-            background: '#181818',
-            paused: true,
-        })
-        
-        const fiveElAnimation = gsap.fromTo(wraperEls[5], {
-            background: 'radial-gradient(114.82% 115.65% at -2.91% 16.22%, #181818 0%, #181818 100%)',
-        }, {
-            background: 'radial-gradient(114.82% 115.65% at -2.91% 16.22%, #E31E1E 0%, #6E2C2C 100%)',
-            paused: true,
-        })
-
-        const scrollReturn = (evt: Event) => {
-            evt.preventDefault()
-        }
-        
+        // Pin секции timeline при скролле
         ScrollTrigger.create({
             trigger: '.trigger-timeline',
             start: 'top top',
-            end: () => `+=${(totalWidth * 1.8) - 900}`,
+            end: 'bottom+=100',
             pin: true,
-            scrub: 1,
-            onToggle: self => {
-              if (self.isActive) {
-                  self.refresh()
-              }
-            },
-            onLeave: () => {
+            scrub: false,
+            onLeave: self => {
+                const scrollReturn = (evt: Event) => {
+                    evt.preventDefault()
+                }
                 document.querySelector('.main').insertAdjacentHTML('beforeend', this.videoTemplate())
                 const video = document.querySelector('#deep-video') as HTMLVideoElement
                 video.classList.add('visible')
@@ -272,45 +237,103 @@ class Animation {
                         }, 2200)
                     }
                 })
-            },
-            onUpdate: (self) => {
-                ScrollTrigger.update()
-                const progress = +self.progress.toFixed(2);
-                const currentProgress = (totalWidth - 900) * progress;
-                
-                console.log(progress)
-                if (currentProgress >= 300 && currentProgress < 550) {
-                    clearClasses()
-                    updateEls(1)
-                    secondElAnimation.reverse()
-                } else if (currentProgress >= 550 && currentProgress < 850) {
-                    clearClasses()
-                    updateEls(2)
-                    secondElAnimation.play()
-                } else if (currentProgress >= 850 && currentProgress < 1150) {
-                    clearClasses()
-                    updateEls(3)
-                } else if (currentProgress >= 1150 && currentProgress < 1450) {
-                    clearClasses()
-                    updateEls(4)
-                    fiveElAnimation.reverse()
-                } else if (currentProgress >= 1450 && currentProgress < 1650) {
-                    clearClasses()
-                    updateEls(5)
-                    fiveElAnimation.play()
-                } else if (currentProgress >= 1650) {
-                    clearClasses()
-                    updateEls(6)
-                } else {
-                    clearClasses()
-                    updateEls(0)
-                }
-                
-                gsap.to(timeline, {
-                    translateX: -currentProgress
-                })
             }
-        })
+        });
+
+        // Swiper для timeline__header
+        const timelineLine = document.querySelector('.timeline__line.swiper');
+        const wrappers = document.querySelectorAll('.timeline__wrapper');
+        const headers = document.querySelectorAll('.timeline__header');
+        if (timelineLine && wrappers.length && headers.length) {
+            // Сброс всех активных классов
+            wrappers.forEach(w => w.classList.remove('active'));
+            headers.forEach(h => h.classList.remove('active'));
+            // Активируем первый обычный слайд и первый wrapper
+            headers[1].classList.add('active');
+            wrappers[0].classList.add('active');
+
+            const syncTabs = (idx: number) => {
+                wrappers.forEach(w => w.classList.remove('active'));
+                headers.forEach(h => h.classList.remove('active'));
+                if (idx === 0) return;
+                if (idx === headers.length - 1) return;
+                if (wrappers[idx - 1]) wrappers[idx - 1].classList.add('active');
+                if (headers[idx]) headers[idx].classList.add('active');
+            };
+            const swiper = new Swiper(timelineLine as HTMLElement, {
+                modules: [Navigation, Pagination],
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+                initialSlide: 1, // стартуем с первого этапа, а не 00:00
+                navigation: {
+                    nextEl: '.timeline__line .swiper-btn--next',
+                    prevEl: '.timeline__line .swiper-btn--prev',
+                },
+                pagination: {
+                    el: '.timeline__line .swiper-pagination',
+                    clickable: true,
+                },
+                autoHeight: false,
+                on: {
+                    slideChange: function () {
+                        syncTabs(this.realIndex);
+                        if (this.realIndex === 0) {
+                            this.slideTo(1);
+                            return;
+                        }
+                        if (this.realIndex === headers.length - 1) {
+                            this.slideTo(headers.length - 2);
+                            return;
+                        }
+                    },
+                    transitionEnd: function () {
+                        syncTabs(this.activeIndex);
+                    }
+                },
+            });
+            // Также обновляем табы при клике на стрелки
+            const updateTabs = () => {
+                syncTabs(swiper.realIndex);
+                if (swiper.realIndex === 0) {
+                    swiper.slideTo(1);
+                    return;
+                }
+                if (swiper.realIndex === headers.length - 1) {
+                    swiper.slideTo(headers.length - 2);
+                    return;
+                }
+            };
+            swiper.on('slideNextTransitionEnd', updateTabs);
+            swiper.on('slidePrevTransitionEnd', updateTabs);
+
+            // Добавляю клик по этапам
+            headers.forEach((header, idx) => {
+                if (header.classList.contains('timeline__header--time')) {
+                    // Если клик по 08:00 или 00:00, снимаем все активные классы
+                    header.addEventListener('click', () => {
+                        wrappers.forEach(w => w.classList.remove('active'));
+                        headers.forEach(h => h.classList.remove('active'));
+                    });
+                    // Если клик по 08:00, перескакиваем на последний этап
+                    if (idx === headers.length - 1) {
+                        header.addEventListener('click', () => {
+                            swiper.slideTo(headers.length - 2);
+                            syncTabs(headers.length - 2);
+                        });
+                    }
+                    return;
+                }
+                header.addEventListener('click', () => {
+                    wrappers.forEach(w => w.classList.remove('active'));
+                    headers.forEach(h => h.classList.remove('active'));
+                });
+                (header as HTMLElement).style.cursor = 'pointer';
+                header.addEventListener('click', () => {
+                    swiper.slideTo(idx);
+                    syncTabs(idx);
+                });
+            });
+        }
     }
 }
 

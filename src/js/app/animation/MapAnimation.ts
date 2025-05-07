@@ -28,6 +28,16 @@ class MapAnimation {
             }
         })
         
+        gsap.set(this.map, {
+            scale: 0.65,
+            x: -100,
+            y: 130,
+        })
+        
+        gsap.set('.interactive-map__marker', {
+            opacity: 0,
+        })
+        
         mapTimeline
             .to(this.map, {
                 scale: 1.25,
@@ -46,6 +56,9 @@ class MapAnimation {
                     this.mapTrigger.style.backgroundImage = `url("./assets/images/sea-2.png")`
                     this.infoElements.forEach(el => el.classList.remove('active'))
                     this.infoElements[2].classList.add('active')
+                    gsap.set('.interactive-map__marker', {
+                        opacity: 1,
+                    })
                 },
                 onReverseComplete: () => {
                     this.mapTrigger.style.backgroundImage = `url("./assets/images/sea-1.png")`
@@ -72,6 +85,9 @@ class MapAnimation {
                     this.mapTrigger.style.backgroundImage = `url("../assets/images/sea-1.png")`
                     this.infoElements.forEach(el => el.classList.remove('active'))
                     this.infoElements[1].classList.add('active')
+                    gsap.set('.interactive-map__marker', {
+                        opacity: 0,
+                    })
                 }
             })
             .to('.interactive-map__marker', {

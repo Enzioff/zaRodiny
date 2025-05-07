@@ -20,6 +20,7 @@
   }
 
   &__picture {
+    position: relative;
     display: flex;
     flex-shrink: 0;
     padding-top: 112px;
@@ -29,6 +30,16 @@
     overflow: hidden;
     transform: translateX(-80px);
     z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -42%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle, rgba(42, 123, 155, 0) 63%, rgb(255, 255, 255) 82%);
+    }
 
     img {
       @include coverFull();
