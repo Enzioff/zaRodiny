@@ -264,7 +264,8 @@ class Animation {
                 modules: [Navigation, Pagination],
                 slidesPerView: 'auto',
                 spaceBetween: 0,
-                initialSlide: 1, // стартуем с первого этапа, а не 00:00
+                initialSlide: 1,
+                watchSlidesProgress: true,
                 navigation: {
                     nextEl: '.timeline__line .swiper-btn--next',
                     prevEl: '.timeline__line .swiper-btn--prev',
@@ -275,11 +276,27 @@ class Animation {
                 },
                 autoHeight: false,
                 on: {
+                    init() {
+                        if (this.realIndex === 1) {
+                            this.navigation.prevEl.classList.add('swiper-button-disabled')
+                            this.navigation.prevEl.setAttribute('disabled', '')
+                        }
+                    },
                     slideChange: function () {
                         syncTabs(this.realIndex);
                         if (this.realIndex === 0) {
                             this.slideTo(1);
                             return;
+                        }
+                        if (this.realIndex === 1) {
+                            if (this.navigation.prevEl) {
+                                this.navigation.prevEl.classList.add('swiper-button-disabled')
+                                this.navigation.prevEl.setAttribute('disabled', '')
+                            }
+                        }
+                        if (this.realIndex !== 1) {
+                            this.navigation.prevEl.classList.remove('swiper-button-disabled')
+                            this.navigation.prevEl.removeAttribute('disabled')
                         }
                         if (this.realIndex === headers.length - 1) {
                             this.slideTo(headers.length - 2);
@@ -297,6 +314,9 @@ class Animation {
                 if (swiper.realIndex === 0) {
                     swiper.slideTo(1);
                     return;
+                }
+                if (swiper.realIndex === 1) {
+                    swiper.navigation.prevEl.style.disaplay = 'none'
                 }
                 if (swiper.realIndex === headers.length - 1) {
                     swiper.slideTo(headers.length - 2);
