@@ -82,7 +82,7 @@ class MapAnimation {
                 ease: 'none',
                 delay: 1000,
                 onReverseComplete: () => {
-                    this.mapTrigger.style.backgroundImage = `url("../assets/images/sea-1.png")`
+                    this.mapTrigger.style.backgroundImage = `url("./assets/images/sea-1.png")`
                     this.infoElements.forEach(el => el.classList.remove('active'))
                     this.infoElements[1].classList.add('active')
                     gsap.set('.interactive-map__marker', {
