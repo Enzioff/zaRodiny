@@ -1,3 +1,5 @@
+import gsap from 'gsap';
+
 class ActionBlock {
     actionItems;
     contentItems;
@@ -12,11 +14,23 @@ class ActionBlock {
     init() {
         this.actionItems.forEach((el, idx) => {
             el.addEventListener('mouseenter', (evt) => {
-                this.contentItems.item(idx).classList.add('active')
+                const element = this.contentItems.item(idx) as HTMLElement;
+                
+                gsap.set(element, {display: 'flex'})
+                
+                gsap.fromTo(element,
+                    {autoAlpha: 0},
+                    {autoAlpha: 1, duration: 0.2}
+                );
             })
             
             el.addEventListener('mouseleave', (evt) => {
-                this.contentItems.item(idx).classList.remove('active')
+                const element = this.contentItems.item(idx) as HTMLElement;
+                gsap.to(element, {
+                    autoAlpha: 0,
+                    duration: 0.1,
+                    onComplete: () => element.style.display = 'none'
+                });
             })
         })
     }

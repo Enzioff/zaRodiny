@@ -25,8 +25,8 @@ class MapAnimation {
                 end: 'bottom+=2000 bottom',
                 pin: true,
                 snap: {
-                    snapTo: "labels", // Привязка к меткам
-                    duration: { min: 0.3, max: 0.8 }, // Плавность доводки
+                    snapTo: "labelsDirectional",
+                    duration: { min: 0.3, max: 0.8 },
                 },
                 scrub: 1,
             }

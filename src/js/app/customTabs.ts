@@ -1,3 +1,5 @@
+import gsap from "gsap";
+
 class CustomTabs {
     tabsContainer;
     headerEls;
@@ -16,14 +18,32 @@ class CustomTabs {
             el.addEventListener('click', () => {
                 this.clearClasses()
                 el.classList.add('active')
-                this.contentEls.item(idx).classList.add('active')
+                const contentElement = this.contentEls.item(idx)
+                const infoElement = contentElement.querySelector('.catalog__info')
+                const sliderElement = contentElement.querySelector('.slider')
+                
+                gsap.set(contentElement, {display: 'flex'})
+                
+                gsap.fromTo(infoElement,
+                    {
+                        autoAlpha: 0,
+                        x: -100,
+                    },
+                    {
+                        autoAlpha: 1,
+                        duration: 0.4,
+                        x: 0,
+                    }
+                );
             })
         })
     }
     
     clearClasses() {
         this.headerEls.forEach((el) => el.classList.remove('active'))
-        this.contentEls.forEach((el) => el.classList.remove('active'))
+        this.contentEls.forEach((el) => {
+            gsap.set(el, {display: 'none'})
+        })
     }
 }
 

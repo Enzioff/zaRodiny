@@ -53,9 +53,10 @@
     background: linear-gradient(0deg, #E31E24, #E31E24),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     border-radius: 20px 0 0 0;
+    transition: .2s linear;
 
     &-red {
-      background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #D4AC55 0%, #6E592C 100%)
+      background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #D4AC55 0%, #6E592C 100%);
     }
 
     .swiper {
