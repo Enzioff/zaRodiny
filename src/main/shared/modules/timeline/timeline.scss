@@ -6,7 +6,7 @@
     flex-direction: column;
     padding-top: 50px;
     padding-bottom: 54px;
-    background: url("../assets/images/timeline-bg-1.jpg") no-repeat center;
+    background: var(--background) no-repeat center;
     background-size: cover;
     border-radius: 0 0 50px 50px;
     z-index: 2;
@@ -17,7 +17,7 @@
     display: flex;
     align-items: baseline;
     overflow: visible;
-    transform: translateX(-90px);
+    transform: translateX(-75px);
 
     .swiper-wrapper {
       display: flex;
@@ -51,6 +51,10 @@
           color: transparent;
           background: transparent;
 
+          &::before {
+            opacity: 0;
+          }
+
           &::after {
             opacity: 0;
           }
@@ -58,6 +62,39 @@
 
         .timeline__text {
           opacity: 0;
+        }
+      }
+
+      &::before {
+        opacity: 0;
+      }
+      .timeline__time {
+        &::before {
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.3) 100%);
+        }
+      }
+
+      &.swiper-slide-active {
+        &::before {
+          opacity: 1;
+        }
+        .timeline__time {
+          &::before {
+            opacity: 1;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+          }
+        }
+      }
+
+      &.swiper-slide-active ~ .timeline__header {
+        &::before {
+          opacity: 1;
+        }
+        .timeline__time {
+          &::before {
+            opacity: 1;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+          }
         }
       }
     }
@@ -86,7 +123,7 @@
       align-items: center;
       pointer-events: none;
       z-index: 10;
-      transform: translate(90px, -50%);
+      transform: translate(75px, -50%);
     }
 
     .swiper-pagination {

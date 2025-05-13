@@ -242,6 +242,7 @@ class Animation {
 
         // Swiper для timeline__header
         const timelineLine = document.querySelector('.timeline__line.swiper');
+        const timelineTop = document.querySelector('.timeline__top') as HTMLElement;
         const wrappers = document.querySelectorAll('.timeline__wrapper');
         const headers = document.querySelectorAll('.timeline__header') as NodeListOf<HTMLElement>;
         if (timelineLine && wrappers.length && headers.length) {
@@ -265,6 +266,7 @@ class Animation {
                 slidesPerView: 'auto',
                 spaceBetween: 0,
                 initialSlide: 1,
+                centeredSlides: true,
                 watchSlidesProgress: true,
                 navigation: {
                     nextEl: '.timeline__line .swiper-btn--next',
@@ -283,10 +285,19 @@ class Animation {
                         }
                     },
                     slideChange: function () {
+                        console.log('index', this.realIndex);
+                        if (this.realIndex >= 0 && this.realIndex < 3) {
+                            timelineTop.style.setProperty('--background', "url('../assets/images/timeline-bg-1.jpg')");
+                        } else if (this.realIndex >= 3 && this.realIndex < 6) {
+                            timelineTop.style.setProperty('--background', "url('../assets/images/timeline-bg-2.png')");
+                        } else {
+                            timelineTop.style.setProperty('--background', "url('../assets/images/timeline-bg-3.png')");
+                        }
+                        
                         syncTabs(this.realIndex);
-                        if (headers[this.realIndex + 4]) {
+                        if (headers[this.realIndex + 3]) {
                             headers.forEach(el => el.style.opacity = null)
-                            headers[this.realIndex + 4].style.opacity = String(0);
+                            headers[this.realIndex + 3].style.opacity = String(0);
                         }
                         if (this.realIndex === 0) {
                             this.slideTo(1);
@@ -301,6 +312,18 @@ class Animation {
                         if (this.realIndex !== 1) {
                             this.navigation.prevEl.classList.remove('swiper-button-disabled')
                             this.navigation.prevEl.removeAttribute('disabled')
+                        }
+                        if (this.realIndex === headers.length - 2) {
+                            if (this.navigation.nextEl) {
+                                this.navigation.nextEl.classList.add('swiper-button-disabled')
+                                this.navigation.nextEl.setAttribute('disabled', '')
+                            }
+                        }
+                        if (this.realIndex < headers.length - 2) {
+                            if (this.navigation.nextEl) {
+                                this.navigation.nextEl.classList.remove('swiper-button-disabled')
+                                this.navigation.nextEl.removeAttribute('disabled')
+                            }
                         }
                         if (this.realIndex === headers.length - 1) {
                             this.slideTo(headers.length - 2);

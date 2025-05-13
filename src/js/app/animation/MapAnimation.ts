@@ -24,6 +24,10 @@ class MapAnimation {
                 start: 'top top',
                 end: 'bottom+=2000 bottom',
                 pin: true,
+                snap: {
+                    snapTo: "labels", // Привязка к меткам
+                    duration: { min: 0.3, max: 0.8 }, // Плавность доводки
+                },
                 scrub: 1,
             }
         })
@@ -39,6 +43,7 @@ class MapAnimation {
         })
         
         mapTimeline
+            .addLabel("step1")
             .to(this.map, {
                 scale: 1.25,
                 x: 328,
@@ -46,7 +51,6 @@ class MapAnimation {
                 rotate: 14,
                 duration: 1500,
                 ease: 'none',
-                delay: 1000,
                 onStart: () => {
                     this.infoElements.forEach(el => el.classList.remove('active'))
                     this.mapContainer.classList.add('active')
@@ -67,6 +71,7 @@ class MapAnimation {
                     this.infoElements[0].classList.add('active')
                 }
             })
+            .addLabel("step2")
             .to('.interactive-map__marker', {
                 scale: 0.75,
                 duration: 1500,
@@ -80,7 +85,6 @@ class MapAnimation {
                 rotate: 26,
                 duration: 1500,
                 ease: 'none',
-                delay: 1000,
                 onReverseComplete: () => {
                     this.mapTrigger.style.backgroundImage = `url("./assets/images/sea-1.png")`
                     this.infoElements.forEach(el => el.classList.remove('active'))
@@ -90,6 +94,7 @@ class MapAnimation {
                     })
                 }
             })
+            .addLabel("step3")
             .to('.interactive-map__marker', {
                 scale: 0.3,
                 duration: 1500,
