@@ -17,7 +17,7 @@
     display: flex;
     align-items: baseline;
     overflow: visible;
-    transform: translateX(170px);
+    transform: translateX(-90px);
 
     .swiper-wrapper {
       display: flex;
@@ -44,59 +44,49 @@
       }
     }
 
-    .timeline__header {
-      &:not(.swiper-slide-visible, .swiper-slide-fully-visible, .swiper-slide-active) {
-        opacity: 0;
-      }
 
-      &.swiper-slide-visible {
-        &:not(.swiper-slide-fully-visible, .swiper-slide-active) {
-          &::before {
+    .timeline__header {
+      &:not(.swiper-slide-visible, .timeline__header--time) {
+        .timeline__time {
+          color: transparent;
+          background: transparent;
+
+          &::after {
             opacity: 0;
           }
-
-          .timeline__time {
-            color: transparent;
-            background: transparent;
-
-            &::after {
-              opacity: 0;
-            }
-          }
-
-          .timeline__text {
-            opacity: .3;
-          }
         }
-      }
 
-      &.swiper-slide-prev {
-        opacity: 0;
-      }
-
-      &.swiper-slide-fully-visible,
-      &.swiper-slide-active {
-        transition: .2s linear;
-        opacity: 1;
+        .timeline__text {
+          opacity: 0;
+        }
       }
     }
 
+
     .timeline__header--time {
       opacity: 1 !important;
+
+      &:first-child {
+        padding-right: 120px;
+      }
+
+      &:last-child {
+        padding-left: 120px;
+      }
     }
 
     .swiper-control {
       position: absolute;
       top: 15%;
-      left: 0;
+      left: -13%;
       right: 0;
-      width: 100%;
+      width: 1418px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       pointer-events: none;
       z-index: 10;
-      transform: translate(-170px, -50%);
+      transform: translate(90px, -50%);
     }
 
     .swiper-pagination {
@@ -202,6 +192,7 @@
     background-color: rgba($white, .3);
     border-radius: 25px;
     z-index: 2;
+    transition: .2s linear;
 
     &::after {
       content: "";
@@ -213,6 +204,7 @@
       height: 90px;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
       transform: translateX(-50%);
+      transition: .2s linear;
     }
 
     &::before {
@@ -225,6 +217,7 @@
       height: 4px;
       background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
       transform: translateY(-50%);
+      transition: .2s linear;
     }
   }
 

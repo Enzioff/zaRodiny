@@ -243,7 +243,7 @@ class Animation {
         // Swiper для timeline__header
         const timelineLine = document.querySelector('.timeline__line.swiper');
         const wrappers = document.querySelectorAll('.timeline__wrapper');
-        const headers = document.querySelectorAll('.timeline__header');
+        const headers = document.querySelectorAll('.timeline__header') as NodeListOf<HTMLElement>;
         if (timelineLine && wrappers.length && headers.length) {
             // Сброс всех активных классов
             wrappers.forEach(w => w.classList.remove('active'));
@@ -284,6 +284,10 @@ class Animation {
                     },
                     slideChange: function () {
                         syncTabs(this.realIndex);
+                        if (headers[this.realIndex + 4]) {
+                            headers.forEach(el => el.style.opacity = null)
+                            headers[this.realIndex + 4].style.opacity = String(0);
+                        }
                         if (this.realIndex === 0) {
                             this.slideTo(1);
                             return;
