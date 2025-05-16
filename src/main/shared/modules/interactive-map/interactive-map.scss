@@ -71,6 +71,7 @@
     overflow: hidden;
     background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #D4AC55 0%, #6E592C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     box-shadow: 4px 10px 40px 0 #C60A0A33;
+    transition: background .2s linear;
 
     &::before {
       content: '';
@@ -130,10 +131,6 @@
     &:nth-child(2) {
       top: 510px;
       left: 257px;
-
-      .interactive-map__pin {
-        background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #E31E1E 0%, #6E2C2C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-      }
     }
     &:nth-child(3) {
       top: 628px;
@@ -142,6 +139,20 @@
     &:nth-child(4) {
       top: 721px;
       left: 397px;
+
+      //.interactive-map__pin {
+      //  background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #E31E1E 0%, #6E2C2C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      //}
+    }
+
+    &.active {
+      .interactive-map__pin {
+        background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #E31E1E 0%, #6E2C2C 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      }
+
+      .interactive-map__text {
+        background: radial-gradient(76.16% 76.16% at 9.66% 21.01%, #E31E1E 0%, #6E2C2C 100%);
+      }
     }
   }
 

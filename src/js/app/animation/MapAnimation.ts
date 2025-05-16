@@ -17,6 +17,8 @@ class MapAnimation {
     
     init() {
         gsap.registerPlugin(ScrollTrigger)
+        const contentEls = document.querySelectorAll('[data-tabs-item]')
+        console.log(contentEls, contentEls[contentEls.length - 1])
         const mapTimeline = gsap.timeline({
             ease: 'none',
             scrollTrigger: {
@@ -63,12 +65,18 @@ class MapAnimation {
                     gsap.set('.interactive-map__marker', {
                         opacity: 1,
                     })
+                    gsap.to(contentEls[3], {
+                        display: 'flex'
+                    })
                 },
                 onReverseComplete: () => {
                     this.mapTrigger.style.backgroundImage = `url("./assets/images/sea-1.png")`
                     this.mapContainer.classList.remove('active')
                     this.infoElements.forEach(el => el.classList.remove('active'))
                     this.infoElements[0].classList.add('active')
+                    gsap.set(contentEls[3], {
+                        display: 'none'
+                    })
                 }
             })
             .addLabel("step2")
