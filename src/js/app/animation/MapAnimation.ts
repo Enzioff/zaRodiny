@@ -26,10 +26,6 @@ class MapAnimation {
                 start: 'top top',
                 end: 'bottom+=2000 bottom',
                 pin: true,
-                snap: {
-                    snapTo: "labelsDirectional",
-                    duration: { min: 0.3, max: 0.8 },
-                },
                 scrub: 1,
             }
         })
@@ -45,7 +41,6 @@ class MapAnimation {
         })
         
         mapTimeline
-            .addLabel("step1")
             .to(this.map, {
                 scale: 1.25,
                 x: 328,
@@ -65,7 +60,7 @@ class MapAnimation {
                     gsap.set('.interactive-map__marker', {
                         opacity: 1,
                     })
-                    gsap.to(contentEls[3], {
+                    gsap.to(contentEls[1], {
                         display: 'flex'
                     })
                 },
@@ -74,12 +69,11 @@ class MapAnimation {
                     this.mapContainer.classList.remove('active')
                     this.infoElements.forEach(el => el.classList.remove('active'))
                     this.infoElements[0].classList.add('active')
-                    gsap.set(contentEls[3], {
+                    gsap.set(contentEls[1], {
                         display: 'none'
                     })
                 }
             })
-            .addLabel("step2")
             .to('.interactive-map__marker', {
                 scale: 0.75,
                 duration: 1500,
@@ -100,9 +94,11 @@ class MapAnimation {
                     gsap.set('.interactive-map__marker', {
                         opacity: 0,
                     })
+                    gsap.set(contentEls[1], {
+                        display: 'none'
+                    })
                 }
             })
-            .addLabel("step3")
             .to('.interactive-map__marker', {
                 scale: 0.3,
                 duration: 1500,
