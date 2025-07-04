@@ -8,6 +8,8 @@
 <path d="M38 9.51211e-05L57 11.1523L38 22.3044L38 9.51211e-05Z" fill="white" />
 <path d="M19 9.51211e-05L38 11.1523L19 22.3044L19 9.51211e-05Z" fill="white" fill-opacity="0.7" />
 <path d="M-4.25596e-08 9.51211e-05L19 11.1523L1.90735e-06 22.3044L-4.25596e-08 9.51211e-05Z" fill="white" fill-opacity="0.4" />
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="icon-close">
+<path d="M7 7L17 17M7 17L17 7" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
 </symbol><symbol viewBox="0 0 10 12" id="icon-pointer">
 <path d="M9.5 6L0.5 11.5L0.5 0.5L9.5 6Z" />
 </symbol><symbol viewBox="0 0 26 25" fill="none" id="icon-question">
@@ -330,4 +332,4 @@
 </defs>
 </symbol><pattern id="ship_pattern0_2145_1939" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#ship_image0_2145_1939" transform="matrix(0.00149973 0 0 0.0018575 -0.124473 -0.206458)" />
-</pattern></defs><use id="icon-arrow-usage" xlink:href="#icon-arrow" class="sprite-symbol-usage" /><use id="icon-arrows-usage" xlink:href="#icon-arrows" class="sprite-symbol-usage" /><use id="icon-pointer-usage" xlink:href="#icon-pointer" class="sprite-symbol-usage" /><use id="icon-question-usage" xlink:href="#icon-question" class="sprite-symbol-usage" /><use id="icon-star-usage" xlink:href="#icon-star" class="sprite-symbol-usage" /><use id="icon-vk-usage" xlink:href="#icon-vk" class="sprite-symbol-usage" /><use id="icon-yt-usage" xlink:href="#icon-yt" class="sprite-symbol-usage" /><use id="map-usage" xlink:href="#map" class="sprite-symbol-usage" /><use id="map-2-usage" xlink:href="#map-2" class="sprite-symbol-usage" /><use id="map-3-usage" xlink:href="#map-3" class="sprite-symbol-usage" /><use id="ship-usage" xlink:href="#ship" class="sprite-symbol-usage" /></svg>
+</pattern></defs><use id="icon-arrow-usage" xlink:href="#icon-arrow" class="sprite-symbol-usage" /><use id="icon-arrows-usage" xlink:href="#icon-arrows" class="sprite-symbol-usage" /><use id="icon-close-usage" xlink:href="#icon-close" class="sprite-symbol-usage" /><use id="icon-pointer-usage" xlink:href="#icon-pointer" class="sprite-symbol-usage" /><use id="icon-question-usage" xlink:href="#icon-question" class="sprite-symbol-usage" /><use id="icon-star-usage" xlink:href="#icon-star" class="sprite-symbol-usage" /><use id="icon-vk-usage" xlink:href="#icon-vk" class="sprite-symbol-usage" /><use id="icon-yt-usage" xlink:href="#icon-yt" class="sprite-symbol-usage" /><use id="map-usage" xlink:href="#map" class="sprite-symbol-usage" /><use id="map-2-usage" xlink:href="#map-2" class="sprite-symbol-usage" /><use id="map-3-usage" xlink:href="#map-3" class="sprite-symbol-usage" /><use id="ship-usage" xlink:href="#ship" class="sprite-symbol-usage" /></svg>
